@@ -1,1 +1,74 @@
-/*# sourceMappingURL=home.css.map */
+@charset "UTF-8";
+/* Хедер, Футтер */
+/* Обо мне */
+/* Основные услуги */
+/* Пакетное предложение */
+/* Беспдатная консультация */
+/*Запись на консультацию */
+@import 'https://fonts.googleapis.com/css2?family=Pattaya&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Poppins&display=swap';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header,
+main,
+footer {
+  width: 100%;
+}
+
+.main {
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+/* <1024px */
+@media (min-width: 1024px) {
+  .header,
+  .main__block,
+  .footer {
+    padding: 2vw 3vw;
+  }
+  h2 {
+    font-size: 2vw;
+    line-height: 2vw;
+    font-weight: 700;
+  }
+  /* Хедер */
+  .header {
+    background-color: rgba(192, 148, 133, 0.4);
+  }
+  /* Обо мне */
+  .about {
+    color: rgb(255, 255, 255);
+    background-color: rgba(189, 143, 128, 0.6);
+  }
+  /* Основные услуги */
+  .services {
+    background-color: rgb(255, 255, 255);
+  }
+  /* Пакетное предложение */
+  .offer {
+    background-color: rgba(198, 157, 144, 0.7);
+  }
+  /* Бесплатная встреча */
+  .free-advice {
+    background-color: rgba(198, 157, 144, 0.4);
+  }
+  /* Запись на консультацию */
+  .signup {
+    color: rgb(255, 255, 255);
+    background-color: rgba(176, 149, 124, 0.7);
+  }
+  /* Сертификаты */
+  .sertificates {
+    background-color: rgb(255, 255, 255);
+  }
+  /* Футер */
+  .footer {
+    color: rgb(255, 255, 255);
+    background-color: rgba(192, 148, 133, 0.4);
+  }
+}/*# sourceMappingURL=home.css.map */

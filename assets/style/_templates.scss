@@ -1,0 +1,10 @@
+@mixin image($position) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: $position;
+}
+@mixin h2 {
+  font-size: 2vw;
+  line-height: 2vw;
+  font-weight: 700;
+}

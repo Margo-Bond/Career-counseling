@@ -1,0 +1,77 @@
+@import '../vars';
+@import '../templates';
+@import 'https://fonts.googleapis.com/css2?family=Pattaya&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Poppins&display=swap';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header,
+main,
+footer {
+  width: 100%;
+}
+.main {
+  font-family: $fontPoppins;
+  color: $colorBlack;
+}
+
+/* <1024px */
+@media (min-width: 1024px) {
+  .header,
+  .main__block,
+  .footer {
+    padding: 2vw 3vw;
+  }
+  h2 {
+    @include h2;
+  }
+  /* Хедер */
+  .header {
+    background-color: $colorHaederFooter;
+  }
+  .main {
+  }
+  /* Обо мне */
+  .about {
+    color: $colorWhite;
+    background-color: $colorAbout;
+  }
+  /* Основные услуги */
+  .services {
+    background-color: $colorWhite;
+    .service {
+    }
+    .service_cv {
+    }
+    .service_interview {
+    }
+    .service_preparation {
+    }
+    .service_set {
+    }
+  }
+  /* Пакетное предложение */
+  .offer {
+    background-color: $colorOffer;
+  }
+  /* Бесплатная встреча */
+  .free-advice {
+    background-color: $colorFreeAdvice;
+  }
+  /* Запись на консультацию */
+  .signup {
+    color: $colorWhite;
+    background-color: $colorSignUp;
+  }
+  /* Сертификаты */
+  .sertificates {
+    background-color: $colorWhite;
+  }
+  /* Футер */
+  .footer {
+    color: $colorWhite;
+    background-color: $colorHaederFooter;
+  }
+}
