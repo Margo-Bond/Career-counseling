@@ -75,7 +75,7 @@ footer {
   }
   /* Обо мне */
   .about {
-    padding-top: 5vw;
+    padding-top: 10vw;
     padding-bottom: 5vw;
     padding-left: 5vw;
     color: rgb(255, 255, 255);
@@ -83,8 +83,6 @@ footer {
     letter-spacing: 0.245em;
     display: flex;
     gap: 10vw;
-    border-bottom-left-radius: 3vw;
-    border-bottom-right-radius: 3vw;
   }
   .about .about-img {
     width: 20vw;
@@ -94,7 +92,7 @@ footer {
     background-repeat: no-repeat;
     background-size: auto 30vw;
     border-radius: 50%;
-    border: 0.2vw solid rgba(134, 85, 69, 0.7);
+    border: 0.1vw solid rgba(134, 85, 69, 0.7);
   }
   .about .about__text {
     text-align: center;
@@ -152,14 +150,22 @@ footer {
     font-size: 2vw;
     line-height: 2vw;
     font-weight: 700;
-    padding-top: 0.3vw;
+    display: flex;
+    align-items: center;
   }
   .signup .signuplink {
     display: flex;
+    align-items: center;
     gap: 1vw;
   }
+  .signup .signuplink :hover {
+    filter: brightness(0.8);
+  }
+  .signup .signuplink .signuplinkimg {
+    width: 2vw;
+    height: 2vw;
+  }
   .signup .signuplink .signuplinklink {
-    padding-top: 0.6vw;
     font-size: 1.5vw;
     line-height: 1.5vw;
     font-weight: 500;

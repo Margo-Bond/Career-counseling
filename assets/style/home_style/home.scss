@@ -2,7 +2,7 @@
 @import '../templates';
 @import 'https://fonts.googleapis.com/css2?family=Pattaya&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Poppins&display=swap';
-* {  
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -68,7 +68,7 @@ footer {
   }
   /* Обо мне */
   .about {
-    padding-top: 5vw;
+    padding-top: 10vw;
     padding-bottom: 5vw;
     padding-left: 5vw;
     color: $colorWhite;
@@ -76,8 +76,6 @@ footer {
     letter-spacing: 0.245em;
     display: flex;
     gap: 10vw;
-    border-bottom-left-radius: 3vw;
-    border-bottom-right-radius: 3vw;
     .about-img {
       width: 20vw;
       height: 20vw;
@@ -86,7 +84,7 @@ footer {
       background-repeat: no-repeat;
       background-size: auto 30vw;
       border-radius: 50%;
-      border: 0.2vw solid $colorFrame;
+      border: 0.1vw solid $colorFrame;
     }
     .about__text {
       text-align: center;
@@ -149,24 +147,33 @@ footer {
     color: $colorWhite;
     background-color: $colorSignUp;
     letter-spacing: 0.245em;
-    height: 7vw;    
+    height: 7vw;
     .signuptext {
-      @include h2; 
-      padding-top: 0.3vw;     
+      @include h2;
+      display: flex;      
+      align-items: center;
+      
     }
     display: flex;
     gap: 3vw;
     .signuplink {
       display: flex;     
+      align-items: center;
       gap: 1vw;
-      .signuplinklink {     
-        padding-top: 0.6vw;
+      :hover {
+        filter: brightness(0.8);
+      }
+      .signuplinkimg {
+        width: 2vw;
+        height: 2vw;
+      }
+      .signuplinklink {        
         font-size: 1.5vw;
         line-height: 1.5vw;
         font-weight: 500;
         text-decoration: none;
         color: $colorWhite;
-      }
+              }
     }
   }
   /* Сертификаты */
