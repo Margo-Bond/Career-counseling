@@ -49,6 +49,19 @@ footer {
   .services {
     background-color: rgb(255, 255, 255);
   }
+  .services .service {
+    display: flex;
+    height: 60vw;
+  }
+  .services .service .service__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+  }
+  .services .service .service__picture img {
+    max-width: 90%;
+  }
   /* Пакетное предложение */
   .offer {
     background-color: rgba(198, 157, 144, 0.7);

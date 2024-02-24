@@ -16,12 +16,32 @@
         <h2 class="subtitle">Обо мне</h2>
       </div>
       <!-- Основные услуги -->
-      <div class="main__block services">
+      <div class="main__block services" id="services">
         <h2 class="subtitle">Основные услуги</h2>
-        <div class="service service_cv"></div>
-        <div class="service service_interview"></div>
-        <div class="service service_preparation"></div>
-        <div class="service service_set"></div>
+        <div class="service">
+          <div class="service__picture">
+            <img src="./assets/images/service2.jpg" alt="Резюме" />
+          </div>
+          <div class="service__desc">
+            <h3 class="service__name">Создание эффективного резюме</h3>
+            <p class="service__text">
+              Очень часто соискатели откликаются одним и тем же резюме на разные
+              должности, что приводит к отказам и/или снижением количества
+              приглашений на собеседование. Как опытный HRD с экспертизой в
+              подборе персонала в международных компаниях проведу для Вас аудит
+              существующего резюме, объясню принципы создания резюме под
+              конкретную должность. Сделаем Ваше резюме действительно работающей
+              на Вас визитной карточкой, отражающей Ваш профессиональный опыт и
+              достижения.
+            </p>
+            <p class="service__cost">
+              Стоимость:
+              <button onclick="showCost(this)">Узнать стоимость</button>
+            </p>
+          </div>
+        </div>
+        <div class="service"></div>
+        <div class="service"></div>
       </div>
       <!-- Пакетное предложение -->
       <div class="main__block offer">
@@ -40,5 +60,13 @@
     </main>
     <!-- Футер -->
     <footer class="footer"></footer>
+    <script>
+      function showCost(button) {
+        const paragraph = button.parentNode; // Получаем родительский элемент кнопки (т.е. <p>)
+        const service__cost = document.createTextNode("10000 рублей"); // Создаем текст "10000 рублей"
+        paragraph.removeChild(button); // Удаляем кнопку
+        paragraph.appendChild(service__cost); // Добавляем текст "10000 рублей" вместо кнопки
+      }
+    </script>
   </body>
 </html>
