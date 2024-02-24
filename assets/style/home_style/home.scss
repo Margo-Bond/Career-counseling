@@ -153,14 +153,13 @@ footer {
     height: 7vw;
     .signuptext {
       @include h2;
-      display: flex;      
+      display: flex;
       align-items: center;
-      
     }
     display: flex;
     gap: 3vw;
     .signuplink {
-      display: flex;     
+      display: flex;
       align-items: center;
       gap: 1vw;
       :hover {
@@ -170,13 +169,13 @@ footer {
         width: 2vw;
         height: 2vw;
       }
-      .signuplinklink {        
+      .signuplinklink {
         font-size: 1.5vw;
         line-height: 1.5vw;
         font-weight: 500;
         text-decoration: none;
         color: $colorWhite;
-              }
+      }
     }
   }
   /* Сертификаты */
