@@ -104,14 +104,17 @@ footer {
   .services {
     background-color: $colorWhite;
     .service {
-    }
-    .service_cv {
-    }
-    .service_interview {
-    }
-    .service_preparation {
-    }
-    .service_set {
+      display: flex;
+      height: 60vw;
+      .service__picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        img {
+          max-width: 90%;
+        }
+      }
     }
   }
   /* Пакетное предложение */
