@@ -75,8 +75,38 @@ footer {
   }
   /* Обо мне */
   .about {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-left: 5vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
+    letter-spacing: 0.245em;
+    display: flex;
+    gap: 10vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+  }
+  .about .about-img {
+    width: 20vw;
+    height: 20vw;
+    background: url(../../images/img_3038new.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: auto 30vw;
+    border-radius: 50%;
+    border: 0.2vw solid rgba(134, 85, 69, 0.7);
+  }
+  .about .about__text {
+    text-align: center;
+    text-indent: 2vw;
+    width: 45vw;
+  }
+  .about .story {
+    padding-top: 3vw;
+    line-height: 1.5vw;
+    font-size: 1.2vw;
+    font-weight: 400;
+    letter-spacing: 0.1em;
   }
   /* Основные услуги */
   .services {
@@ -85,6 +115,25 @@ footer {
   /* Пакетное предложение */
   .offer {
     background-color: rgba(198, 157, 144, 0.7);
+    letter-spacing: 0.245em;
+  }
+  .offer .descriptionoffer {
+    margin-top: 2vw;
+    padding: 3vw;
+    background-color: rgb(255, 255, 255);
+  }
+  .offer .descriptionoffer .descriptiontitle {
+    text-align: center;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-weight: 400;
+  }
+  .offer .descriptionoffer .descriptionbody {
+    padding: 2vw;
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    font-weight: 400;
+    text-align: left;
   }
   /* Бесплатная встреча */
   .free-advice {
@@ -94,6 +143,28 @@ footer {
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(176, 149, 124, 0.7);
+    letter-spacing: 0.245em;
+    height: 7vw;
+    display: flex;
+    gap: 3vw;
+  }
+  .signup .signuptext {
+    font-size: 2vw;
+    line-height: 2vw;
+    font-weight: 700;
+    padding-top: 0.3vw;
+  }
+  .signup .signuplink {
+    display: flex;
+    gap: 1vw;
+  }
+  .signup .signuplink .signuplinklink {
+    padding-top: 0.6vw;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
   }
   /* Сертификаты */
   .sertificates {
