@@ -19,9 +19,7 @@ footer {
 
 /* <1024px */
 @media (min-width: 1024px) {
-  .header,
-  .main__block,
-  .footer {
+  .main__block {
     padding: 2vw 3vw;
   }
   h2 {
@@ -29,7 +27,42 @@ footer {
   }
   /* Хедер */
   .header {
-    background-color: $colorHaederFooter;
+    color: $colorWhite;
+    background-color: $colorHeaderFooter;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 6.6vw;
+    top: 0;
+    padding: 1.1vw 3vw;
+    .header__left {
+      flex-basis: 25%;
+      .header__name {
+        font-family: $fontPattaya;
+        font-size: 2.23vw;
+      }
+      .header__job {
+        font-family: $fontPoppins;
+        font-weight: bold;
+        font-size: 1vw;
+        padding-top: 0.5vw;
+      }
+    }
+    .header__menu {
+      flex-basis: 70%;
+      display: flex;
+      align-items: center;
+      .header__nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        a {
+          text-decoration: none;
+          color: $colorWhite;
+          font-size: 1.1vw;
+        }
+      }
+    }
   }
   .main {
   }
@@ -70,8 +103,35 @@ footer {
     background-color: $colorWhite;
   }
   /* Футер */
+  /* Футер */
   .footer {
     color: $colorWhite;
-    background-color: $colorHaederFooter;
+    background-color: $colorHeaderFooter;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.1vw 0;
+    .footer__left {
+      flex-basis: 42%;
+      display: flex;
+      justify-content: end;
+    }
+    .footer__right {
+      flex-basis: 35%;
+      display: flex;
+      justify-content: start;
+      gap: 3vw;
+      .footer__media {
+        width: 2vw;
+        height: 2vw;
+        :hover {
+          filter: brightness(0.8);
+        }
+      }
+    }
+    .footer__name {
+      font-family: $fontPoppins;
+      font-size: 1.1vw;
+    }
   }
 }
