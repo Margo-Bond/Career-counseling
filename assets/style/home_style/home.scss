@@ -2,7 +2,7 @@
 @import '../templates';
 @import 'https://fonts.googleapis.com/css2?family=Pattaya&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Poppins&display=swap';
-* {
+* {  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,8 +35,39 @@ footer {
   }
   /* Обо мне */
   .about {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-left: 5vw;
     color: $colorWhite;
     background-color: $colorAbout;
+    letter-spacing: 0.245em;
+    display: flex;
+    gap: 10vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+    .about-img {
+      width: 20vw;
+      height: 20vw;
+      background: url(../../images/img_3038new.jpg);
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: auto 30vw;
+      border-radius: 50%;
+      border: 0.2vw solid $colorFrame;
+    }
+    .about__text {
+      text-align: center;
+      text-indent: 2vw;
+      width: 45vw;
+    }
+    .story {
+      padding-top: 3vw;
+      line-height: 1.5vw;
+      font-size: 1.2vw;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+    }
+    // }
   }
   /* Основные услуги */
   .services {
@@ -55,7 +86,27 @@ footer {
   /* Пакетное предложение */
   .offer {
     background-color: $colorOffer;
+    letter-spacing: 0.245em;
+    .descriptionoffer {
+      margin-top: 2vw;
+      padding: 3vw;
+      background-color: $colorWhite;
+      .descriptiontitle {
+        text-align: center;
+        font-size: 1.5vw;
+        line-height: 1.5vw;
+        font-weight: 400;
+      }
+      .descriptionbody {
+        padding: 2vw;
+        font-size: 1.2vw;
+        line-height: 1.5vw;
+        font-weight: 400;
+        text-align: left;
+      }
+    }
   }
+
   /* Бесплатная встреча */
   .free-advice {
     background-color: $colorFreeAdvice;
@@ -64,6 +115,26 @@ footer {
   .signup {
     color: $colorWhite;
     background-color: $colorSignUp;
+    letter-spacing: 0.245em;
+    height: 7vw;    
+    .signuptext {
+      @include h2; 
+      padding-top: 0.3vw;     
+    }
+    display: flex;
+    gap: 3vw;
+    .signuplink {
+      display: flex;     
+      gap: 1vw;
+      .signuplinklink {     
+        padding-top: 0.6vw;
+        font-size: 1.5vw;
+        line-height: 1.5vw;
+        font-weight: 500;
+        text-decoration: none;
+        color: $colorWhite;
+      }
+    }
   }
   /* Сертификаты */
   .sertificates {
