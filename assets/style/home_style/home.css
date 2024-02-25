@@ -24,12 +24,13 @@ footer {
   color: rgb(0, 0, 0);
 }
 
-/* <1024px */
+/* >1024px */
 @media (min-width: 1024px) {
   .main__block {
     padding: 2vw 3vw;
+    letter-spacing: 0.245em;
   }
-  h2 {
+  .subtitle {
     font-size: 2vw;
     line-height: 2vw;
     font-weight: 700;
@@ -83,6 +84,7 @@ footer {
     letter-spacing: 0.245em;
     display: flex;
     gap: 10vw;
+    justify-content: center;
   }
   .about .about-img {
     width: 20vw;
@@ -92,7 +94,7 @@ footer {
     background-repeat: no-repeat;
     background-size: auto 30vw;
     border-radius: 50%;
-    border: 0.1vw solid rgba(134, 85, 69, 0.7);
+    border: 2.5px solid rgba(134, 85, 69, 0.7);
   }
   .about .about__text {
     text-align: center;
@@ -109,6 +111,55 @@ footer {
   /* Основные услуги */
   .services {
     background-color: rgb(255, 255, 255);
+  }
+  .services .service {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    padding: 2vw 5vw;
+    gap: 3vw;
+  }
+  .services .service .service__picture img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 5px solid rgba(134, 85, 69, 0.7);
+  }
+  .services .service .service__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+  }
+  .services .service .service__desc .service__name {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-weight: 700;
+  }
+  .services .service .service__desc .service__text,
+  .services .service .service__desc .service__cost,
+  .services .service .service__desc .service__list {
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    font-weight: 400;
+  }
+  .services .service .service__desc .service__cost_bold {
+    font-weight: 700;
+  }
+  .services .service .service__desc .service__list {
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+    gap: 0, 5мц;
+  }
+  .services .service .service__desc .service__button {
+    padding: 0.5vw;
+    border-radius: 1vw;
+    border: none;
+    background-color: rgba(134, 85, 69, 0.7);
+  }
+  .services .service .service__desc .service__button:hover {
+    cursor: pointer;
+  }
+  .services .service_reverse {
+    grid-template-columns: 1fr 0.3fr;
   }
   /* Пакетное предложение */
   .offer {
@@ -176,7 +227,20 @@ footer {
   .sertificates {
     background-color: rgb(255, 255, 255);
   }
-  /* Футер */
+  .sertificates .sertificates__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20vw;
+    place-items: center;
+    padding: 2vw 5vw;
+    -moz-column-gap: 5vw;
+         column-gap: 5vw;
+  }
+  .sertificates .sertificates__wrap .sertificates__img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
   /* Футер */
   .footer {
     color: rgb(255, 255, 255);
@@ -208,4 +272,66 @@ footer {
     font-family: "Poppins", sans-serif;
     font-size: 1.1vw;
   }
+}
+/* 768-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Хедер */
+  /* Обо мне */
+  .about {
+    color: rgb(255, 255, 255);
+    background-color: rgba(189, 143, 128, 0.6);
+  }
+  /* Основные услуги */
+  .services {
+    background-color: rgb(255, 255, 255);
+  }
+  /* Пакетное предложение */
+  .offer {
+    background-color: rgba(198, 157, 144, 0.7);
+  }
+  /* Бесплатная встреча */
+  .free-advice {
+    background-color: rgba(198, 157, 144, 0.4);
+  }
+  /* Запись на консультацию */
+  .signup {
+    color: rgb(255, 255, 255);
+    background-color: rgba(176, 149, 124, 0.7);
+  }
+  /* Сертификаты */
+  .sertificates {
+    background-color: rgb(255, 255, 255);
+  }
+  /* Футер */
+}
+/* 320-767px */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* Хедер */
+  /* Обо мне */
+  .about {
+    color: rgb(255, 255, 255);
+    background-color: rgba(189, 143, 128, 0.6);
+  }
+  /* Основные услуги */
+  .services {
+    background-color: rgb(255, 255, 255);
+  }
+  /* Пакетное предложение */
+  .offer {
+    background-color: rgba(198, 157, 144, 0.7);
+  }
+  /* Бесплатная встреча */
+  .free-advice {
+    background-color: rgba(198, 157, 144, 0.4);
+  }
+  /* Запись на консультацию */
+  .signup {
+    color: rgb(255, 255, 255);
+    background-color: rgba(176, 149, 124, 0.7);
+  }
+  /* Сертификаты */
+  .sertificates {
+    background-color: rgb(255, 255, 255);
+  }
+  /* Футер */
 }/*# sourceMappingURL=home.css.map */

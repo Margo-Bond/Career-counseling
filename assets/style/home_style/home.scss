@@ -17,12 +17,13 @@ footer {
   color: $colorBlack;
 }
 
-/* <1024px */
+/* >1024px */
 @media (min-width: 1024px) {
   .main__block {
     padding: 2vw 3vw;
+    letter-spacing: 0.245em;
   }
-  h2 {
+  .subtitle {
     @include h2;
   }
   /* Хедер */
@@ -64,8 +65,6 @@ footer {
       }
     }
   }
-  .main {
-  }
   /* Обо мне */
   .about {
     padding-top: 10vw;
@@ -76,6 +75,7 @@ footer {
     letter-spacing: 0.245em;
     display: flex;
     gap: 10vw;
+    justify-content: center;
     .about-img {
       width: 20vw;
       height: 20vw;
@@ -84,7 +84,7 @@ footer {
       background-repeat: no-repeat;
       background-size: auto 30vw;
       border-radius: 50%;
-      border: 0.1vw solid $colorFrame;
+      border: 2.5px solid $colorFrame;
     }
     .about__text {
       text-align: center;
@@ -104,14 +104,51 @@ footer {
   .services {
     background-color: $colorWhite;
     .service {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      padding: 2vw 5vw;
+      gap: 3vw;
+      .service__picture {
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          border: 5px solid $colorFrame;
+        }
+      }
+      .service__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+        .service__name {
+          @include h3;
+        }
+        .service__text,
+        .service__cost,
+        .service__list {
+          @include text;
+        }
+        .service__cost_bold {
+          font-weight: 700;
+        }
+        .service__list {
+          display: flex;
+          flex-direction: column;
+          list-style-position: inside;
+          gap: 0, 5мц;
+        }
+        .service__button {
+          padding: 0.5vw;
+          border-radius: 1vw;
+          border: none;
+          background-color: $colorFrame;
+        }
+        .service__button:hover {
+          cursor: pointer;
+        }
+      }
     }
-    .service_cv {
-    }
-    .service_interview {
-    }
-    .service_preparation {
-    }
-    .service_set {
+    .service_reverse {
+      grid-template-columns: 1fr 0.3fr;
     }
   }
   /* Пакетное предложение */
@@ -137,7 +174,6 @@ footer {
       }
     }
   }
-
   /* Бесплатная встреча */
   .free-advice {
     background-color: $colorFreeAdvice;
@@ -150,14 +186,13 @@ footer {
     height: 7vw;
     .signuptext {
       @include h2;
-      display: flex;      
+      display: flex;
       align-items: center;
-      
     }
     display: flex;
     gap: 3vw;
     .signuplink {
-      display: flex;     
+      display: flex;
       align-items: center;
       gap: 1vw;
       :hover {
@@ -167,20 +202,32 @@ footer {
         width: 2vw;
         height: 2vw;
       }
-      .signuplinklink {        
+      .signuplinklink {
         font-size: 1.5vw;
         line-height: 1.5vw;
         font-weight: 500;
         text-decoration: none;
         color: $colorWhite;
-              }
+      }
     }
   }
   /* Сертификаты */
   .sertificates {
     background-color: $colorWhite;
+    .sertificates__wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 20vw;
+      place-items: center;
+      padding: 2vw 5vw;
+      column-gap: 5vw;
+      .sertificates__img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+      }
+    }
   }
-  /* Футер */
   /* Футер */
   .footer {
     color: $colorWhite;
@@ -211,5 +258,77 @@ footer {
       font-family: $fontPoppins;
       font-size: 1.1vw;
     }
+  }
+}
+
+/* 768-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Хедер */
+  .header {
+  }
+  /* Обо мне */
+  .about {
+    color: $colorWhite;
+    background-color: $colorAbout;
+  }
+  /* Основные услуги */
+  .services {
+    background-color: $colorWhite;
+  }
+  /* Пакетное предложение */
+  .offer {
+    background-color: $colorOffer;
+  }
+  /* Бесплатная встреча */
+  .free-advice {
+    background-color: $colorFreeAdvice;
+  }
+  /* Запись на консультацию */
+  .signup {
+    color: $colorWhite;
+    background-color: $colorSignUp;
+  }
+  /* Сертификаты */
+  .sertificates {
+    background-color: $colorWhite;
+  }
+  /* Футер */
+  .footer {
+  }
+}
+
+/* 320-767px */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* Хедер */
+  .header {
+  }
+  /* Обо мне */
+  .about {
+    color: $colorWhite;
+    background-color: $colorAbout;
+  }
+  /* Основные услуги */
+  .services {
+    background-color: $colorWhite;
+  }
+  /* Пакетное предложение */
+  .offer {
+    background-color: $colorOffer;
+  }
+  /* Бесплатная встреча */
+  .free-advice {
+    background-color: $colorFreeAdvice;
+  }
+  /* Запись на консультацию */
+  .signup {
+    color: $colorWhite;
+    background-color: $colorSignUp;
+  }
+  /* Сертификаты */
+  .sertificates {
+    background-color: $colorWhite;
+  }
+  /* Футер */
+  .footer {
   }
 }
