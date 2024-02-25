@@ -24,6 +24,32 @@ footer {
   color: rgb(0, 0, 0);
 }
 
+#services,
+#offer,
+#signup {
+  scroll-margin-top: 6.6vw;
+}
+
+/* Футер */
+.footer {
+  color: rgb(255, 255, 255);
+  background-color: rgb(200, 178, 164);
+  display: flex;
+  padding: 1.1vw 0;
+}
+.footer .footer__left {
+  display: flex;
+}
+.footer .footer__right {
+  display: flex;
+}
+.footer .footer__right .footer__media:hover {
+  filter: brightness(0.8);
+}
+.footer .footer__name {
+  font-family: "Poppins", sans-serif;
+}
+
 /* >1024px */
 @media (min-width: 1024px) {
   .main__block {
@@ -243,21 +269,15 @@ footer {
   }
   /* Футер */
   .footer {
-    color: rgb(255, 255, 255);
-    background-color: rgb(200, 178, 164);
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1.1vw 0;
   }
   .footer .footer__left {
     flex-basis: 42%;
-    display: flex;
     justify-content: end;
   }
   .footer .footer__right {
     flex-basis: 35%;
-    display: flex;
     justify-content: start;
     gap: 3vw;
   }
@@ -265,11 +285,7 @@ footer {
     width: 2vw;
     height: 2vw;
   }
-  .footer .footer__right .footer__media :hover {
-    filter: brightness(0.8);
-  }
   .footer .footer__name {
-    font-family: "Poppins", sans-serif;
     font-size: 1.1vw;
   }
 }
@@ -379,6 +395,26 @@ footer {
     max-height: 100%;
   }
   /* Футер */
+  .footer {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer .footer__left {
+    flex-basis: 70%;
+    justify-content: center;
+  }
+  .footer .footer__right {
+    flex-basis: 25%;
+    justify-content: center;
+    gap: 4vw;
+  }
+  .footer .footer__right .footer__media {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  .footer .footer__name {
+    font-size: 2.7vw;
+  }
 }
 /* 320-767px */
 @media (min-width: 320px) and (max-width: 767px) {
@@ -505,4 +541,24 @@ footer {
     max-width: 100%;
   }
   /* Футер */
+  .footer {
+    flex-direction: column;
+    gap: 2.5vw;
+    padding: 3vw 0;
+  }
+  .footer .footer__left {
+    justify-content: center;
+  }
+  .footer .footer__right {
+    flex-basis: 25%;
+    justify-content: center;
+    gap: 8vw;
+  }
+  .footer .footer__right .footer__media {
+    width: 5vw;
+    height: 5vw;
+  }
+  .footer .footer__name {
+    font-size: 3.5vw;
+  }
 }/*# sourceMappingURL=home.css.map */

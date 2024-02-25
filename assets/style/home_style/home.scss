@@ -16,6 +16,30 @@ footer {
   font-family: $fontPoppins;
   color: $colorBlack;
 }
+#services,
+#offer,
+#signup {
+  scroll-margin-top: 6.6vw;
+}
+/* Футер */
+.footer {
+  color: $colorWhite;
+  background-color: $colorHeaderFooter;
+  display: flex;
+  padding: 1.1vw 0;
+  .footer__left {
+    display: flex;
+  }
+  .footer__right {
+    display: flex;
+    .footer__media:hover {
+      filter: brightness(0.8);
+    }
+  }
+  .footer__name {
+    font-family: $fontPoppins;
+  }
+}
 
 /* >1024px */
 @media (min-width: 1024px) {
@@ -230,32 +254,22 @@ footer {
   }
   /* Футер */
   .footer {
-    color: $colorWhite;
-    background-color: $colorHeaderFooter;
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1.1vw 0;
     .footer__left {
       flex-basis: 42%;
-      display: flex;
       justify-content: end;
     }
     .footer__right {
       flex-basis: 35%;
-      display: flex;
       justify-content: start;
       gap: 3vw;
       .footer__media {
         width: 2vw;
         height: 2vw;
-        :hover {
-          filter: brightness(0.8);
-        }
       }
     }
     .footer__name {
-      font-family: $fontPoppins;
       font-size: 1.1vw;
     }
   }
@@ -365,6 +379,24 @@ footer {
   }
   /* Футер */
   .footer {
+    justify-content: space-evenly;
+    align-items: center;
+    .footer__left {
+      flex-basis: 70%;
+      justify-content: center;
+    }
+    .footer__right {
+      flex-basis: 25%;
+      justify-content: center;
+      gap: 4vw;
+      .footer__media {
+        width: 3.5vw;
+        height: 3.5vw;
+      }
+    }
+    .footer__name {
+      font-size: 2.7vw;
+    }
   }
 }
 
@@ -489,5 +521,23 @@ footer {
   }
   /* Футер */
   .footer {
+    flex-direction: column;
+    gap: 2.5vw;
+    padding: 3vw 0;
+    .footer__left {
+      justify-content: center;
+    }
+    .footer__right {
+      flex-basis: 25%;
+      justify-content: center;
+      gap: 8vw;
+      .footer__media {
+        width: 5vw;
+        height: 5vw;
+      }
+    }
+    .footer__name {
+      font-size: 3.5vw;
+    }
   }
 }
