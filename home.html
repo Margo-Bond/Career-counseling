@@ -14,13 +14,16 @@
         <p class="header__name">Наталья Ковалева</p>
         <p class="header__job">Карьерное консультирование</p>
       </div>
+      <div class="header__burger">
+        <span></span>
+      </div>
       <div class="header__menu">
         <nav class="header__nav">
           <a href="#about">Обо мне</a>
           <a href="#services">Основные услуги</a>
           <a href="#offer">Пакетное предложение</a>
           <a href="#signup">Запись на консультацию</a>
-          <a href="#">Бесплатная ознакомительная встреча</a>
+          <a href="#advice">Бесплатная ознакомительная встреча</a>
           <a href="#sertificates">Сертификаты</a>
         </nav>
       </div>
@@ -174,7 +177,7 @@
         </div>
       </div>
       <!-- Бесплатная ознакомительная встреча -->
-      <div class="main__block free-advice">
+      <div id="advice" class="main__block free-advice">
         <h2 class="subtitle">Бесплатная ознакомительная встреча</h2>
       </div>
       <!-- Запись на консультацию -->
@@ -270,6 +273,15 @@
         paragraph.removeChild(button);
         paragraph.appendChild(service__cost);
       }
+    </script>
+    <script>
+      document
+        .querySelector('.header__burger')
+        .addEventListener('click', function () {
+          this.classList.toggle('active');
+          document.querySelector('.header__menu').classList.toggle('active');
+          document.querySelector('body').classList.toggle('lock');
+        });
     </script>
   </body>
 </html>
