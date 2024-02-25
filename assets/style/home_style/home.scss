@@ -17,6 +17,56 @@ footer {
   color: $colorBlack;
 }
 
+/* Хедер */
+.header {
+  color: $colorWhite;
+  background-color: $colorHeaderFooter;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  .header__name {
+    font-family: $fontPattaya;
+  }
+  .header__job {
+    font-family: $fontPoppins;
+    font-weight: bold;
+  }
+}
+.header__menu {
+  display: flex;
+  .header__nav {
+    width: 100%;
+    display: flex;
+    a {
+      text-decoration: none;
+      color: $colorWhite;
+    }
+  }
+}
+
+/* Футер */
+.footer {
+  color: $colorWhite;
+  background-color: $colorHeaderFooter;
+  display: flex;
+  padding: 1.1vw 0;
+  .footer__left {
+    display: flex;
+  }
+  .footer__right {
+    display: flex;
+    .footer__media:hover {
+      filter: brightness(0.8);
+    }
+  }
+  .footer__name {
+    font-family: $fontPoppins;
+  }
+}
+
 /* >1024px */
 @media (min-width: 1024px) {
   .main__block {
@@ -26,43 +76,38 @@ footer {
   .subtitle {
     @include h2;
   }
+  #services,
+  #offer,
+  #signup,
+  #advice {
+    scroll-margin-top: 6.6vw;
+  }
   /* Хедер */
   .header {
-    color: $colorWhite;
-    background-color: $colorHeaderFooter;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
     height: 6.6vw;
-    top: 0;
     padding: 1.1vw 3vw;
     .header__left {
       flex-basis: 25%;
       .header__name {
-        font-family: $fontPattaya;
         font-size: 2.23vw;
       }
       .header__job {
-        font-family: $fontPoppins;
-        font-weight: bold;
         font-size: 1vw;
         padding-top: 0.5vw;
       }
     }
     .header__menu {
       flex-basis: 70%;
-      display: flex;
       align-items: center;
       .header__nav {
-        width: 100%;
-        display: flex;
         justify-content: space-between;
         a {
-          text-decoration: none;
-          color: $colorWhite;
           font-size: 1.1vw;
         }
       }
+    }
+    .header__burger {
+      display: none;
     }
   }
   /* Обо мне */
@@ -230,32 +275,22 @@ footer {
   }
   /* Футер */
   .footer {
-    color: $colorWhite;
-    background-color: $colorHeaderFooter;
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1.1vw 0;
     .footer__left {
       flex-basis: 42%;
-      display: flex;
       justify-content: end;
     }
     .footer__right {
       flex-basis: 35%;
-      display: flex;
       justify-content: start;
       gap: 3vw;
       .footer__media {
         width: 2vw;
         height: 2vw;
-        :hover {
-          filter: brightness(0.8);
-        }
       }
     }
     .footer__name {
-      font-family: $fontPoppins;
       font-size: 1.1vw;
     }
   }
@@ -270,8 +305,92 @@ footer {
   .subtitle {
     @include h2-tablet;
   }
+  #services,
+  #offer,
+  #signup,
+  #advice {
+    scroll-margin-top: 8.2vw;
+  }
   /* Хедер */
   .header {
+    height: 8.6vw;
+    padding: 1vw 5vw;
+    .header__left {
+      display: flex;
+      align-items: center;
+      flex-basis: 100%;
+      gap: 12vw;
+      .header__name {
+        font-size: 4.2vw;
+      }
+      .header__job {
+        font-size: 2.1vw;
+        padding-top: 0.5vw;
+        font-weight: bolder;
+      }
+    }
+    .header__menu {
+      position: fixed;
+      top: 8.6vw;
+      right: -50%;
+      height: 20vw;
+      width: 44vw;
+      background-color: rgba(200, 177, 164, 0.845);
+      z-index: 50;
+      transition: all 1s;
+      .header__nav {
+        flex-direction: column;
+        align-items: end;
+        gap: 1vw;
+        padding-right: 1.5vw;
+        a {
+          font-size: 1.9vw;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .header__menu.active {
+      right: 4.5vw;
+    }
+    .header__burger {
+      display: block;
+      position: relative;
+      width: 3.5vw;
+      height: 3vw;
+    }
+    .header__burger::before,
+    .header__burger::after {
+      content: '';
+      background-color: $colorWhite;
+      position: absolute;
+      width: 100%;
+      height: 0.3vw;
+    }
+    .header__burger::before {
+      top: 2vw;
+    }
+    .header__burger::after {
+      top: 4.6vw;
+    }
+    .header__burger span {
+      background-color: $colorWhite;
+      position: absolute;
+      width: 100%;
+      height: 0.3vw;
+      top: 3.3vw;
+      transition: all 0.1s;
+    }
+    .header__burger.active::before {
+      transform: rotate(45deg);
+      top: 3.2vw;
+    }
+    .header__burger.active::after {
+      transform: rotate(-45deg);
+      top: 3.2vw;
+    }
+    .header__burger.active span {
+      transform: scale(0);
+    }
   }
   /* Обо мне */
   .about {
@@ -365,6 +484,24 @@ footer {
   }
   /* Футер */
   .footer {
+    justify-content: space-evenly;
+    align-items: center;
+    .footer__left {
+      flex-basis: 70%;
+      justify-content: center;
+    }
+    .footer__right {
+      flex-basis: 25%;
+      justify-content: center;
+      gap: 4vw;
+      .footer__media {
+        width: 3.5vw;
+        height: 3.5vw;
+      }
+    }
+    .footer__name {
+      font-size: 2.7vw;
+    }
   }
 }
 
@@ -377,8 +514,95 @@ footer {
   .subtitle {
     @include h2-mobile;
   }
+  #services,
+  #offer,
+  #signup,
+  #advice,
+  #sertificates {
+    scroll-margin-top: 14.8vw;
+  }
+  body.lock {
+    overflow: hidden;
+  }
   /* Хедер */
   .header {
+    height: 15vw;
+    padding: 2vw 4vw;
+    .header__left {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 80%;
+      .header__name {
+        font-size: 6.3vw;
+      }
+      .header__job {
+        font-size: 2.9vw;
+        font-weight: bolder;
+      }
+    }
+    .header__menu {
+      position: fixed;
+      top: -100%;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(200, 177, 164, 0.899);
+      z-index: -1;
+      transition: all 1.2s;
+      .header__nav {
+        width: 100%;
+        margin-top: 25%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2%;
+        a {
+          font-size: 4vw;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .header__menu.active {
+      top: 0;
+    }
+    .header__burger {
+      display: block;
+      position: relative;
+      width: 7vw;
+      height: 8vw;
+    }
+    .header__burger::before,
+    .header__burger::after {
+      content: '';
+      background-color: $colorWhite;
+      position: absolute;
+      width: 100%;
+      height: 0.5vw;
+    }
+    .header__burger::before {
+      top: 1vw;
+    }
+    .header__burger::after {
+      top: 6.6vw;
+    }
+    .header__burger span {
+      background-color: $colorWhite;
+      position: absolute;
+      width: 100%;
+      height: 0.5vw;
+      top: 4vw;
+      transition: all 0.1s;
+    }
+    .header__burger.active::before {
+      transform: rotate(45deg);
+      top: 3.2vw;
+    }
+    .header__burger.active::after {
+      transform: rotate(-45deg);
+      top: 3.2vw;
+    }
+    .header__burger.active span {
+      transform: scale(0);
+    }
   }
   /* Обо мне */
   .about {
@@ -489,5 +713,23 @@ footer {
   }
   /* Футер */
   .footer {
+    flex-direction: column;
+    gap: 3vw;
+    padding: 2vw 0 1.5vw;
+    .footer__left {
+      justify-content: center;
+    }
+    .footer__right {
+      flex-basis: 25%;
+      justify-content: center;
+      gap: 6vw;
+      .footer__media {
+        width: 4.5vw;
+        height: 4.5vw;
+      }
+    }
+    .footer__name {
+      font-size: 3.5vw;
+    }
   }
 }

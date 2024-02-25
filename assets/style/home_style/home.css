@@ -24,6 +24,57 @@ footer {
   color: rgb(0, 0, 0);
 }
 
+/* Хедер */
+.header {
+  color: rgb(255, 255, 255);
+  background-color: rgb(200, 178, 164);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.header .header__name {
+  font-family: "Pattaya", sans-serif;
+}
+.header .header__job {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.header__menu {
+  display: flex;
+}
+.header__menu .header__nav {
+  width: 100%;
+  display: flex;
+}
+.header__menu .header__nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Футер */
+.footer {
+  color: rgb(255, 255, 255);
+  background-color: rgb(200, 178, 164);
+  display: flex;
+  padding: 1.1vw 0;
+}
+.footer .footer__left {
+  display: flex;
+}
+.footer .footer__right {
+  display: flex;
+}
+.footer .footer__right .footer__media:hover {
+  filter: brightness(0.8);
+}
+.footer .footer__name {
+  font-family: "Poppins", sans-serif;
+}
+
 /* >1024px */
 @media (min-width: 1024px) {
   .main__block {
@@ -35,44 +86,39 @@ footer {
     line-height: 2vw;
     font-weight: 700;
   }
+  #services,
+  #offer,
+  #signup,
+  #advice {
+    scroll-margin-top: 6.6vw;
+  }
   /* Хедер */
   .header {
-    color: rgb(255, 255, 255);
-    background-color: rgb(200, 178, 164);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
     height: 6.6vw;
-    top: 0;
     padding: 1.1vw 3vw;
   }
   .header .header__left {
     flex-basis: 25%;
   }
   .header .header__left .header__name {
-    font-family: "Pattaya", sans-serif;
     font-size: 2.23vw;
   }
   .header .header__left .header__job {
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
     font-size: 1vw;
     padding-top: 0.5vw;
   }
   .header .header__menu {
     flex-basis: 70%;
-    display: flex;
     align-items: center;
   }
   .header .header__menu .header__nav {
-    width: 100%;
-    display: flex;
     justify-content: space-between;
   }
   .header .header__menu .header__nav a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
     font-size: 1.1vw;
+  }
+  .header .header__burger {
+    display: none;
   }
   /* Обо мне */
   .about {
@@ -243,21 +289,15 @@ footer {
   }
   /* Футер */
   .footer {
-    color: rgb(255, 255, 255);
-    background-color: rgb(200, 178, 164);
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1.1vw 0;
   }
   .footer .footer__left {
     flex-basis: 42%;
-    display: flex;
     justify-content: end;
   }
   .footer .footer__right {
     flex-basis: 35%;
-    display: flex;
     justify-content: start;
     gap: 3vw;
   }
@@ -265,11 +305,7 @@ footer {
     width: 2vw;
     height: 2vw;
   }
-  .footer .footer__right .footer__media :hover {
-    filter: brightness(0.8);
-  }
   .footer .footer__name {
-    font-family: "Poppins", sans-serif;
     font-size: 1.1vw;
   }
 }
@@ -284,7 +320,93 @@ footer {
     line-height: 2vw;
     font-weight: 700;
   }
+  #services,
+  #offer,
+  #signup,
+  #advice {
+    scroll-margin-top: 8.2vw;
+  }
   /* Хедер */
+  .header {
+    height: 8.6vw;
+    padding: 1vw 5vw;
+  }
+  .header .header__left {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    gap: 12vw;
+  }
+  .header .header__left .header__name {
+    font-size: 4.2vw;
+  }
+  .header .header__left .header__job {
+    font-size: 2.1vw;
+    padding-top: 0.5vw;
+    font-weight: bolder;
+  }
+  .header .header__menu {
+    position: fixed;
+    top: 8.6vw;
+    right: -50%;
+    height: 20vw;
+    width: 44vw;
+    background-color: rgba(200, 177, 164, 0.845);
+    z-index: 50;
+    transition: all 1s;
+  }
+  .header .header__menu .header__nav {
+    flex-direction: column;
+    align-items: end;
+    gap: 1vw;
+    padding-right: 1.5vw;
+  }
+  .header .header__menu .header__nav a {
+    font-size: 1.9vw;
+    text-transform: uppercase;
+  }
+  .header .header__menu.active {
+    right: 4.5vw;
+  }
+  .header .header__burger {
+    display: block;
+    position: relative;
+    width: 3.5vw;
+    height: 3vw;
+  }
+  .header .header__burger::before,
+  .header .header__burger::after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 0.3vw;
+  }
+  .header .header__burger::before {
+    top: 2vw;
+  }
+  .header .header__burger::after {
+    top: 4.6vw;
+  }
+  .header .header__burger span {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 0.3vw;
+    top: 3.3vw;
+    transition: all 0.1s;
+  }
+  .header .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 3.2vw;
+  }
+  .header .header__burger.active::after {
+    transform: rotate(-45deg);
+    top: 3.2vw;
+  }
+  .header .header__burger.active span {
+    transform: scale(0);
+  }
   /* Обо мне */
   .about {
     color: rgb(255, 255, 255);
@@ -379,6 +501,26 @@ footer {
     max-height: 100%;
   }
   /* Футер */
+  .footer {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .footer .footer__left {
+    flex-basis: 70%;
+    justify-content: center;
+  }
+  .footer .footer__right {
+    flex-basis: 25%;
+    justify-content: center;
+    gap: 4vw;
+  }
+  .footer .footer__right .footer__media {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  .footer .footer__name {
+    font-size: 2.7vw;
+  }
 }
 /* 320-767px */
 @media (min-width: 320px) and (max-width: 767px) {
@@ -391,7 +533,96 @@ footer {
     line-height: 3vw;
     font-weight: 700;
   }
+  #services,
+  #offer,
+  #signup,
+  #advice,
+  #sertificates {
+    scroll-margin-top: 14.8vw;
+  }
+  body.lock {
+    overflow: hidden;
+  }
   /* Хедер */
+  .header {
+    height: 15vw;
+    padding: 2vw 4vw;
+  }
+  .header .header__left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+  }
+  .header .header__left .header__name {
+    font-size: 6.3vw;
+  }
+  .header .header__left .header__job {
+    font-size: 2.9vw;
+    font-weight: bolder;
+  }
+  .header .header__menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(200, 177, 164, 0.899);
+    z-index: -1;
+    transition: all 1.2s;
+  }
+  .header .header__menu .header__nav {
+    width: 100%;
+    margin-top: 25%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+  }
+  .header .header__menu .header__nav a {
+    font-size: 4vw;
+    text-transform: uppercase;
+  }
+  .header .header__menu.active {
+    top: 0;
+  }
+  .header .header__burger {
+    display: block;
+    position: relative;
+    width: 7vw;
+    height: 8vw;
+  }
+  .header .header__burger::before,
+  .header .header__burger::after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 0.5vw;
+  }
+  .header .header__burger::before {
+    top: 1vw;
+  }
+  .header .header__burger::after {
+    top: 6.6vw;
+  }
+  .header .header__burger span {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 0.5vw;
+    top: 4vw;
+    transition: all 0.1s;
+  }
+  .header .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 3.2vw;
+  }
+  .header .header__burger.active::after {
+    transform: rotate(-45deg);
+    top: 3.2vw;
+  }
+  .header .header__burger.active span {
+    transform: scale(0);
+  }
   /* Обо мне */
   .about {
     color: rgb(255, 255, 255);
@@ -505,4 +736,24 @@ footer {
     max-width: 100%;
   }
   /* Футер */
+  .footer {
+    flex-direction: column;
+    gap: 3vw;
+    padding: 2vw 0 1.5vw;
+  }
+  .footer .footer__left {
+    justify-content: center;
+  }
+  .footer .footer__right {
+    flex-basis: 25%;
+    justify-content: center;
+    gap: 6vw;
+  }
+  .footer .footer__right .footer__media {
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+  .footer .footer__name {
+    font-size: 3.5vw;
+  }
 }/*# sourceMappingURL=home.css.map */
