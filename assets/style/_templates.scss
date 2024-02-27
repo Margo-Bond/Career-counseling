@@ -48,3 +48,10 @@
   line-height: 2.5vw;
   font-weight: 400;
 }
+@mixin button-cost($brdradiussise){
+  border-radius: $brdradiussise;
+  border: none;
+  background-color: $colorFrame;  
+  color: $colorWhite;
+}
+
