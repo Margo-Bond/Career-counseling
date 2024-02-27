@@ -143,7 +143,6 @@ footer {
     padding-left: 5vw;
     color: $colorWhite;
     background-color: $colorAbout;
-    letter-spacing: 0.245em;
     display: flex;
     gap: 10vw;
     justify-content: center;
@@ -160,14 +159,14 @@ footer {
     .about__text {
       text-align: center;
       text-indent: 2vw;
-      width: 45vw;
+      width: 44vw;
     }
     .story {
-      padding-top: 3vw;
-      line-height: 1.5vw;
-      font-size: 1.2vw;
-      font-weight: 400;
-      letter-spacing: 0.1em;
+      padding-top: 2vw;
+      @include text;
+      .newlinetext {
+        display: block;
+      }
     }
     // }
   }
@@ -231,23 +230,32 @@ footer {
   /* Пакетное предложение */
   .offer {
     background-color: $colorOffer;
-    letter-spacing: 0.245em;
     .descriptionoffer {
       margin-top: 2vw;
       padding: 3vw;
       background-color: $colorWhite;
       .descriptiontitle {
         text-align: center;
-        font-size: 1.5vw;
-        line-height: 1.5vw;
-        font-weight: 400;
+        @include h3;
       }
       .descriptionbody {
         padding: 2vw;
-        font-size: 1.2vw;
-        line-height: 1.5vw;
-        font-weight: 400;
         text-align: left;
+        @include text;
+        .offer__list {
+          padding-top: 1.5vw;
+        }
+        .offer__button {
+          padding: 0.5vw;
+          @include button-cost($sizeborderbotton);
+        }
+        .offer__button:hover {
+          cursor: pointer;
+        }
+        .offer__cost {
+          padding-top: 1.5vw;
+          font-weight: 700;
+        }
       }
     }
   }
@@ -259,7 +267,6 @@ footer {
   .signup {
     color: $colorWhite;
     background-color: $colorSignUp;
-    letter-spacing: 0.245em;
     height: 7vw;
     .signuptext {
       @include h2;
@@ -280,9 +287,7 @@ footer {
         height: 2vw;
       }
       .signuplinklink {
-        font-size: 1.5vw;
-        line-height: 1.5vw;
-        font-weight: 500;
+        @include h3;
         text-decoration: none;
         color: $colorWhite;
       }
@@ -426,8 +431,38 @@ footer {
   }
   /* Обо мне */
   .about {
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+    padding-left: 5vw;
     color: $colorWhite;
     background-color: $colorAbout;
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    .about-img {
+      width: 32vw;
+      height: 32vw;     
+      background: url(../../images/img_3038new.jpg);
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: auto 40vw;
+      border-radius: 50%;
+      border: 2.5px solid $colorFrame;      
+    }
+    .about__text {
+      text-align: center;
+      text-indent: 2vw;
+      width: 60vw;
+      @include h2-tablet;
+    }
+    .story {
+      padding-top: 2vw;
+      @include text-tablet;
+      .newlinetext {
+        display: block;
+      }
+    }
+    // }
   }
   /* Основные услуги */
   .services {
@@ -489,6 +524,34 @@ footer {
   /* Пакетное предложение */
   .offer {
     background-color: $colorOffer;
+    .descriptionoffer {
+      margin-top: 2vw;
+      padding: 3vw;
+      background-color: $colorWhite;
+      .descriptiontitle {
+        text-align: center;
+        @include h3-tablet;
+      }
+      .descriptionbody {
+        padding: 2vw;
+        text-align: left;
+        @include text-tablet;
+        .offer__list {
+          padding-top: 1.5vw;
+        }
+        .offer__button {
+          padding: 0.5vw;
+          @include button-cost($sizeborderbotton-tablet);
+        }
+        .offer__button:hover {
+          cursor: pointer;
+        }
+        .offer__cost {
+          padding-top: 1.5vw;
+          font-weight: 700;
+        }
+      }
+    }
   }
   /* Бесплатная встреча */
   .free-advice {
@@ -498,6 +561,31 @@ footer {
   .signup {
     color: $colorWhite;
     background-color: $colorSignUp;
+    height: 9vw;
+    .signuptext {
+      @include h2-tablet;
+      display: flex;
+      align-items: center;
+    }
+    display: flex;
+    gap: 3vw;
+    .signuplink {
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+      :hover {
+        filter: brightness(0.8);
+      }
+      .signuplinkimg {
+        width: 4vw;
+        height: 4vw;
+      }
+      .signuplinklink {
+        @include h3-tablet;
+        text-decoration: none;
+        color: $colorWhite;
+      }
+    }
   }
   /* Сертификаты */
   .sertificates {
@@ -638,8 +726,33 @@ footer {
   }
   /* Обо мне */
   .about {
+    padding-top: 17vw;
     color: $colorWhite;
     background-color: $colorAbout;
+    .about-img {
+      width: 75vw;
+      height: 75vw;
+      background: url(../../images/img_3038new.jpg);
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: auto 90vw;
+      border-radius: 50%;
+      border: 2.5px solid $colorFrame;
+      margin: 0 auto;
+    }
+    .about__text {
+      padding-top: 2vw;
+      text-align: center;
+      @include h2-mobile;
+    }
+    .story {
+      padding: 3vw;
+      text-indent: 5vw;
+      @include text-mobile;
+      .newlinetext {
+        display: block;
+      }
+    }
   }
   /* Основные услуги */
   .services {
@@ -718,6 +831,35 @@ footer {
   /* Пакетное предложение */
   .offer {
     background-color: $colorOffer;
+    .descriptionoffer {
+      margin-top: 2vw;
+      padding: 1vw;
+      padding-left: 2.5vw;
+      background-color: $colorWhite;
+      .descriptiontitle {
+        text-align: center;
+        @include h3-mobile;
+      }
+      .descriptionbody {
+        padding: 2vw;
+        text-align: left;
+        @include text-mobile;
+        .offer__list {
+          padding-top: 1.5vw;
+        }
+        .offer__button {
+          padding: 0.5vw;
+          @include button-cost($sizeborderbotton-mobile);
+        }
+        .offer__button:hover {
+          cursor: pointer;
+        }
+        .offer__cost {
+          padding-top: 1.5vw;
+          font-weight: 700;
+        }
+      }
+    }
   }
   /* Бесплатная встреча */
   .free-advice {
@@ -727,6 +869,31 @@ footer {
   .signup {
     color: $colorWhite;
     background-color: $colorSignUp;
+    height: 10vw;
+    .signuptext {
+      @include h2-mobile;
+      display: flex;
+      align-items: center;
+    }
+    display: flex;
+    gap: 1vw;
+    .signuplink {
+      display: flex;
+      align-items: center;
+      gap: 3vw;
+      :hover {
+        filter: brightness(0.8);
+      }
+      .signuplinkimg {
+        width: 5vw;
+        height: 5vw;
+      }
+      .signuplinklink {
+        @include h3-mobile;
+        text-decoration: none;
+        color: $colorWhite;
+      }
+    }
   }
   /* Сертификаты */
   .sertificates {

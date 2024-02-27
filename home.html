@@ -37,14 +37,22 @@
         <div class="about__text">
           <h2 class="subtitle">Обо мне</h2>
           <div class="story">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac egestas
-            facilisi arcu vivamus. Sit magna at id ipsum sit id viverra felis
-            et. Pellentesque amet tristique rhoncu, donec a euismod velit.
-            Hendrerit molestie fermentum odi euismod.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Hac egestas facilisi arcu vivamus. Sit
-            magna at id ipsum sit id viverra felis et. Pellentesque amet
-            tristique rhoncu, donec a euismod velit. Hendrerit molestie
-            fermentum odi euismod.
+            <span class="newlinetext">
+              Сертифицированный карьерный консультант с опытом в HR более 19
+              лет.</span
+            >
+            <span class="newlinetext">
+              Построила успешную карьеру от специалиста до HRD в разных бизнес
+              сегментах: FMCG, B2B, производство. Опыт на руководящих должностях
+              и управление более 1200 сотрудниками.</span
+            >
+            <span class="newlinetext">
+              Моя миссия — помогать людям осознать свою ценность как специалиста
+              и найти предназначение в профессиональной сфере.</span
+            >
+            <span class="newlinetext">
+              Имею более 300 часов практики карьерного консультирования.</span
+            >
           </div>
         </div>
       </div>
@@ -142,26 +150,39 @@
             Карьерное сопровождение руководителей
           </div>
           <div class="descriptionbody">
-            Предлагаю комплексные программы карьерного сопровождения для
-            руководителей: пакет из 5 консультаций продолжительностью от 1 часа
-            до 1,5 часов:   Исследование текущей ситуации клиента (SCORE
-            анализ): профессиональная идентичность и профориентация,
-            ценностно-ориентированный подход Диагностика потенциала клиента,
-            оценка сильных сторон и областей для развития компетенций. Оценка
-            рисков (SWOT анализ) Стратегическое планирование карьеры: выбор
-            карьерных моделей и маршрутов  Позиционирование на рынке труда
-            (выбор каналов поиска и продвижения, подготовка самопрезентации,
-            подготовка к собеседованию).  Резюмерайтинг: подготовка резюме и
-            сопроводительного письма под целевые вакансии на рынке труда
-            Стоимость пакета из 5 консультаций: 50 000 ₽. Целевая
-            аудитория: руководители среднего и высшего звена, которые не имеют
-            навыка поиска работы, желающие осознанно строить карьеру, сменить
-            сферу деятельности. Результат, который получит клиент: определение
-            профессиональной идентичности стратегический карьерный план
-            системный подход к поиску работы готовую самопрезентацию для
-            собеседований и резюме для целевого сегмента рынка труда  Опыт: Мои
-            клиенты-руководители из компаний разных сегментов рынка:
-            производство В2В/FMCG
+            <p class="offer__text">
+              Комплексная программа для руководителей, состоящая из 5
+              консультаций (от 60 до 90 мин), в результате которой:
+            </p>
+            <ul class="offer__list">
+              <li>
+                Проведем SCORE анализ и оценку профессиональной идентичности
+              </li>
+              <li>
+                Раскроем Ваш потенциал, оценим сильные стороны и риски,
+                определим области для развития компетенций
+              </li>
+              <li>
+                Систематизируем подход к поиску работы, а также научу
+                стратегическому планированию: как выбирать карьерные модели и
+                строить маршруты
+              </li>
+              <li>
+                Определим, как правильно позиционировать себя на рынке труда: от
+                выбора каналов поиска и продвижения до подготовки к
+                собеседованию
+              </li>
+              <li>
+                Подготовим резюме и сопроводительное письмо под целевые вакансии
+                на рынке труда
+              </li>
+            </ul>
+            <p class="offer__cost">
+              Стоимость пакета консультаций:
+              <button class="offer__button" onclick="showCost4(this)">
+                Узнать стоимость
+              </button>
+            </p>
           </div>
         </div>
       </div>
@@ -176,15 +197,18 @@
           <a
             href="https://telegram.me/YourTelegramUsername"
             target="_blank"
-            class="signuplinkimg">
+            class="signuplinkimg"
+          >
             <img
               src="./assets/images/telegram.svg"
               alt="Telegram"
-              class="signuplinkimg" />
+              class="signuplinkimg"
+            />
           </a>
           <a
             class="signuplinklink"
             href="https://telegram.me/YourTelegramUsername"
+            target="_blank"
             >@natalikovaleva</a
           >
         </div>
@@ -253,6 +277,12 @@
         const service__cost = document.createTextNode("25 000 ₽");
         paragraph.removeChild(button);
         paragraph.appendChild(service__cost);
+      }
+      function showCost4(button) {
+        const paragraph = button.parentNode;
+        const offer__cost = document.createTextNode("50 000 рублей");
+        paragraph.removeChild(button);
+        paragraph.appendChild(offer__cost);
       }
     </script>
     <script>

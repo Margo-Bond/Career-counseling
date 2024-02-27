@@ -144,7 +144,6 @@ footer {
     padding-left: 5vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
-    letter-spacing: 0.245em;
     display: flex;
     gap: 10vw;
     justify-content: center;
@@ -162,14 +161,16 @@ footer {
   .about .about__text {
     text-align: center;
     text-indent: 2vw;
-    width: 45vw;
+    width: 44vw;
   }
   .about .story {
-    padding-top: 3vw;
+    padding-top: 2vw;
+    font-size: 1.3vw;
     line-height: 1.5vw;
-    font-size: 1.2vw;
     font-weight: 400;
-    letter-spacing: 0.1em;
+  }
+  .about .story .newlinetext {
+    display: block;
   }
   /* Основные услуги */
   .services {
@@ -235,7 +236,6 @@ footer {
   /* Пакетное предложение */
   .offer {
     background-color: rgba(198, 157, 144, 0.7);
-    letter-spacing: 0.245em;
   }
   .offer .descriptionoffer {
     margin-top: 2vw;
@@ -246,14 +246,31 @@ footer {
     text-align: center;
     font-size: 1.5vw;
     line-height: 1.5vw;
-    font-weight: 400;
+    font-weight: 700;
   }
   .offer .descriptionoffer .descriptionbody {
     padding: 2vw;
-    font-size: 1.2vw;
+    text-align: left;
+    font-size: 1.3vw;
     line-height: 1.5vw;
     font-weight: 400;
-    text-align: left;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list {
+    padding-top: 1.5vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__button {
+    padding: 0.5vw;
+    border-radius: 1vw;
+    border: none;
+    background-color: rgba(134, 85, 69, 0.7);
+    color: rgb(255, 255, 255);
+  }
+  .offer .descriptionoffer .descriptionbody .offer__button:hover {
+    cursor: pointer;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__cost {
+    padding-top: 1.5vw;
+    font-weight: 700;
   }
   /* Бесплатная встреча */
   .free-advice {
@@ -263,7 +280,6 @@ footer {
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(176, 149, 124, 0.7);
-    letter-spacing: 0.245em;
     height: 7vw;
     display: flex;
     gap: 3vw;
@@ -290,7 +306,7 @@ footer {
   .signup .signuplink .signuplinklink {
     font-size: 1.5vw;
     line-height: 1.5vw;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     color: rgb(255, 255, 255);
   }
@@ -434,8 +450,41 @@ footer {
   }
   /* Обо мне */
   .about {
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+    padding-left: 5vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+  }
+  .about .about-img {
+    width: 32vw;
+    height: 32vw;
+    background: url(../../images/img_3038new.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: auto 40vw;
+    border-radius: 50%;
+    border: 2.5px solid rgba(134, 85, 69, 0.7);
+  }
+  .about .about__text {
+    text-align: center;
+    text-indent: 2vw;
+    width: 60vw;
+    font-size: 2.5vw;
+    line-height: 2vw;
+    font-weight: 700;
+  }
+  .about .story {
+    padding-top: 2vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    font-weight: 400;
+  }
+  .about .story .newlinetext {
+    display: block;
   }
   /* Основные услуги */
   .services {
@@ -500,6 +549,41 @@ footer {
   .offer {
     background-color: rgba(198, 157, 144, 0.7);
   }
+  .offer .descriptionoffer {
+    margin-top: 2vw;
+    padding: 3vw;
+    background-color: rgb(255, 255, 255);
+  }
+  .offer .descriptionoffer .descriptiontitle {
+    text-align: center;
+    font-size: 2.1vw;
+    line-height: 1.5vw;
+    font-weight: 700;
+  }
+  .offer .descriptionoffer .descriptionbody {
+    padding: 2vw;
+    text-align: left;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    font-weight: 400;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list {
+    padding-top: 1.5vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__button {
+    padding: 0.5vw;
+    border-radius: 0.7vw;
+    border: none;
+    background-color: rgba(134, 85, 69, 0.7);
+    color: rgb(255, 255, 255);
+  }
+  .offer .descriptionoffer .descriptionbody .offer__button:hover {
+    cursor: pointer;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__cost {
+    padding-top: 1.5vw;
+    font-weight: 700;
+  }
   /* Бесплатная встреча */
   .free-advice {
     background-color: rgba(198, 157, 144, 0.4);
@@ -508,6 +592,35 @@ footer {
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(176, 149, 124, 0.7);
+    height: 9vw;
+    display: flex;
+    gap: 3vw;
+  }
+  .signup .signuptext {
+    font-size: 2.5vw;
+    line-height: 2vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  .signup .signuplink {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+  .signup .signuplink :hover {
+    filter: brightness(0.8);
+  }
+  .signup .signuplink .signuplinkimg {
+    width: 4vw;
+    height: 4vw;
+  }
+  .signup .signuplink .signuplinklink {
+    font-size: 2.1vw;
+    line-height: 1.5vw;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
   }
   /* Сертификаты */
   .sertificates {
@@ -650,8 +763,37 @@ footer {
   }
   /* Обо мне */
   .about {
+    padding-top: 17vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
+  }
+  .about .about-img {
+    width: 75vw;
+    height: 75vw;
+    background: url(../../images/img_3038new.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: auto 90vw;
+    border-radius: 50%;
+    border: 2.5px solid rgba(134, 85, 69, 0.7);
+    margin: 0 auto;
+  }
+  .about .about__text {
+    padding-top: 2vw;
+    text-align: center;
+    font-size: 3.5vw;
+    line-height: 3vw;
+    font-weight: 700;
+  }
+  .about .story {
+    padding: 3vw;
+    text-indent: 5vw;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    font-weight: 400;
+  }
+  .about .story .newlinetext {
+    display: block;
   }
   /* Основные услуги */
   .services {
@@ -735,6 +877,42 @@ footer {
   .offer {
     background-color: rgba(198, 157, 144, 0.7);
   }
+  .offer .descriptionoffer {
+    margin-top: 2vw;
+    padding: 1vw;
+    padding-left: 2.5vw;
+    background-color: rgb(255, 255, 255);
+  }
+  .offer .descriptionoffer .descriptiontitle {
+    text-align: center;
+    font-size: 3.3vw;
+    line-height: 3vw;
+    font-weight: 700;
+  }
+  .offer .descriptionoffer .descriptionbody {
+    padding: 2vw;
+    text-align: left;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    font-weight: 400;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list {
+    padding-top: 1.5vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__button {
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+    border: none;
+    background-color: rgba(134, 85, 69, 0.7);
+    color: rgb(255, 255, 255);
+  }
+  .offer .descriptionoffer .descriptionbody .offer__button:hover {
+    cursor: pointer;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__cost {
+    padding-top: 1.5vw;
+    font-weight: 700;
+  }
   /* Бесплатная встреча */
   .free-advice {
     background-color: rgba(198, 157, 144, 0.4);
@@ -743,6 +921,35 @@ footer {
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(176, 149, 124, 0.7);
+    height: 10vw;
+    display: flex;
+    gap: 1vw;
+  }
+  .signup .signuptext {
+    font-size: 3.5vw;
+    line-height: 3vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  .signup .signuplink {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+  }
+  .signup .signuplink :hover {
+    filter: brightness(0.8);
+  }
+  .signup .signuplink .signuplinkimg {
+    width: 5vw;
+    height: 5vw;
+  }
+  .signup .signuplink .signuplinklink {
+    font-size: 3.3vw;
+    line-height: 3vw;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
   }
   /* Сертификаты */
   .sertificates {
