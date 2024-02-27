@@ -5,8 +5,8 @@
 /* Пакетное предложение */
 /* Беспдатная консультация */
 /*Запись на консультацию */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +19,17 @@ footer {
   width: 100%;
 }
 
-.header__name {
-  font-family: "Montserrat", sans-serif;
+.header__name,
+.header__job {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header,
 .main__block,
-.footer {
-  font-family: "Raleway", sans-serif;
+.footer,
+.footer__name,
+a {
+  font-family: 'Raleway', sans-serif;
 }
 
 .header,
@@ -45,17 +48,16 @@ footer {
 
 /* Хедер */
 .header {
-  color: rgb(255, 255, 255);
   background-color: rgb(200, 178, 164);
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 50;
 }
 .header .header__job {
-  font-family: "Raleway", sans-serif;
+  /*font-family: $fontContent;*/
   font-weight: bold;
 }
 
@@ -69,12 +71,13 @@ footer {
 .header__menu .header__nav a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 /* Main */
 /* Футер */
 .footer {
-  color: rgb(255, 255, 255);
   background-color: rgb(200, 178, 164);
   display: flex;
   padding: 1.1vw 0;
@@ -89,7 +92,7 @@ footer {
   filter: brightness(0.8);
 }
 .footer .footer__name {
-  /*font-family: $fontContent;*/
+  font-weight: 600;
 }
 
 /* >1024px */
@@ -104,8 +107,7 @@ footer {
   }
   #services,
   #offer,
-  #signup,
-  #advice {
+  #signup {
     scroll-margin-top: 6.6vw;
   }
   /* Хедер */
@@ -114,24 +116,24 @@ footer {
     padding: 1.1vw 3vw;
   }
   .header .header__left {
-    flex-basis: 25%;
+    flex-basis: 40%;
   }
   .header .header__left .header__name {
-    font-size: 2.23vw;
+    font-size: 2.2vw;
   }
   .header .header__left .header__job {
-    font-size: 1vw;
-    padding-top: 0.5vw;
+    font-size: 1.2vw;
+    line-height: 1.8vw;
   }
   .header .header__menu {
-    flex-basis: 70%;
+    flex-basis: 60%;
     align-items: center;
   }
   .header .header__menu .header__nav {
     justify-content: space-between;
   }
   .header .header__menu .header__nav a {
-    font-size: 1.1vw;
+    font-size: 1.2vw;
   }
   .header .header__burger {
     display: none;
@@ -320,7 +322,7 @@ footer {
     place-items: center;
     padding: 2vw 5vw;
     -moz-column-gap: 5vw;
-         column-gap: 5vw;
+    column-gap: 5vw;
   }
   .sertificates .sertificates__wrap .sertificates__img {
     max-width: 100%;
@@ -346,7 +348,7 @@ footer {
     height: 2vw;
   }
   .footer .footer__name {
-    font-size: 1.1vw;
+    font-size: 1.3vw;
   }
 }
 /* 768-1023px */
@@ -361,8 +363,8 @@ footer {
   }
   #services,
   #offer,
-  #signup,
-  #advice {
+  #about,
+  #signup {
     scroll-margin-top: 8.2vw;
   }
   /* Хедер */
@@ -374,13 +376,13 @@ footer {
     display: flex;
     align-items: center;
     flex-basis: 100%;
-    gap: 12vw;
+    gap: 7vw;
   }
   .header .header__left .header__name {
-    font-size: 4.2vw;
+    font-size: 3.5vw;
   }
   .header .header__left .header__job {
-    font-size: 2.1vw;
+    font-size: 2.3vw;
     padding-top: 0.5vw;
     font-weight: bolder;
   }
@@ -389,20 +391,20 @@ footer {
     top: 8.6vw;
     right: -50%;
     height: 20vw;
-    width: 44vw;
+    width: 23vw;
     background-color: rgba(200, 177, 164, 0.845);
     z-index: 50;
     transition: all 1s;
   }
   .header .header__menu .header__nav {
+    padding-top: 1vw;
     flex-direction: column;
     align-items: end;
     gap: 1vw;
     padding-right: 1.5vw;
   }
   .header .header__menu .header__nav a {
-    font-size: 1.9vw;
-    text-transform: uppercase;
+    font-size: 2.2vw;
   }
   .header .header__menu.active {
     right: 4.5vw;
@@ -415,24 +417,24 @@ footer {
   }
   .header .header__burger::before,
   .header .header__burger::after {
-    content: "";
+    content: '';
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 100%;
     height: 0.3vw;
   }
   .header .header__burger::before {
-    top: 2vw;
+    top: 2.5vw;
   }
   .header .header__burger::after {
-    top: 4.6vw;
+    top: 5.1vw;
   }
   .header .header__burger span {
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 100%;
     height: 0.3vw;
-    top: 3.3vw;
+    top: 3.8vw;
     transition: all 0.1s;
   }
   .header .header__burger.active::before {
@@ -633,7 +635,7 @@ footer {
     place-items: center;
     padding: 3vw;
     -moz-column-gap: 5vw;
-         column-gap: 5vw;
+    column-gap: 5vw;
   }
   .sertificates .sertificates__wrap .sertificates__img {
     max-height: 100%;
@@ -644,11 +646,11 @@ footer {
     align-items: center;
   }
   .footer .footer__left {
-    flex-basis: 70%;
+    flex-basis: 72%;
     justify-content: center;
   }
   .footer .footer__right {
-    flex-basis: 25%;
+    flex-basis: 23%;
     justify-content: center;
     gap: 4vw;
   }
@@ -670,10 +672,10 @@ footer {
     line-height: 3vw;
     font-weight: 700;
   }
+  #about,
   #services,
   #offer,
   #signup,
-  #advice,
   #sertificates {
     scroll-margin-top: 14.8vw;
   }
@@ -682,7 +684,6 @@ footer {
   }
   /* Хедер */
   .header {
-    height: 15vw;
     padding: 2vw 4vw;
   }
   .header .header__left {
@@ -694,7 +695,7 @@ footer {
     font-size: 6.3vw;
   }
   .header .header__left .header__job {
-    font-size: 2.9vw;
+    font-size: 3.9vw;
     font-weight: bolder;
   }
   .header .header__menu {
@@ -705,7 +706,7 @@ footer {
     width: 100%;
     background-color: rgba(200, 177, 164, 0.899);
     z-index: -1;
-    transition: all 1.2s;
+    transition: all 1s;
   }
   .header .header__menu .header__nav {
     width: 100%;
@@ -729,33 +730,33 @@ footer {
   }
   .header .header__burger::before,
   .header .header__burger::after {
-    content: "";
+    content: '';
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 100%;
     height: 0.5vw;
   }
   .header .header__burger::before {
-    top: 1vw;
+    top: 3vw;
   }
   .header .header__burger::after {
-    top: 6.6vw;
+    top: 8.6vw;
   }
   .header .header__burger span {
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 100%;
     height: 0.5vw;
-    top: 4vw;
+    top: 6vw;
     transition: all 0.1s;
   }
   .header .header__burger.active::before {
     transform: rotate(45deg);
-    top: 3.2vw;
+    top: 5.2vw;
   }
   .header .header__burger.active::after {
     transform: rotate(-45deg);
-    top: 3.2vw;
+    top: 5.2vw;
   }
   .header .header__burger.active span {
     transform: scale(0);
@@ -970,7 +971,7 @@ footer {
     justify-content: center;
     padding: 3vw;
     -moz-column-gap: 5vw;
-         column-gap: 5vw;
+    column-gap: 5vw;
   }
   .sertificates .sertificates__wrap .sertificates__img {
     max-width: 100%;
@@ -996,4 +997,4 @@ footer {
   .footer .footer__name {
     font-size: 3.5vw;
   }
-}/*# sourceMappingURL=home.css.map */
+} /*# sourceMappingURL=home.css.map */
