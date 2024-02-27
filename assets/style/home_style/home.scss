@@ -13,12 +13,15 @@ main,
 footer {
   width: 100%;
 }
-.header__name {
+.header__name,
+.header__job {
   font-family: $fontLogo;
 }
 .header,
 .main__block,
-.footer {
+.footer,
+.footer__name,
+a {
   font-family: $fontContent;
 }
 .header,
@@ -36,16 +39,14 @@ footer {
 
 /* Хедер */
 .header {
-  color: $colorWhite;
   background-color: $colorHeaderFooter;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 50;
   .header__job {
-    /*font-family: $fontContent;*/
     font-weight: bold;
   }
 }
@@ -57,6 +58,8 @@ footer {
     a {
       text-decoration: none;
       color: $colorWhite;
+      text-transform: uppercase;
+      font-weight: 600;
     }
   }
 }
@@ -75,7 +78,6 @@ footer {
 }
 /* Футер */
 .footer {
-  color: $colorWhite;
   background-color: $colorHeaderFooter;
   display: flex;
   padding: 1.1vw 0;
@@ -89,7 +91,7 @@ footer {
     }
   }
   .footer__name {
-    /*font-family: $fontContent;*/
+    font-weight: 600;
   }
 }
 
@@ -104,8 +106,7 @@ footer {
   }
   #services,
   #offer,
-  #signup,
-  #advice {
+  #signup {
     scroll-margin-top: 6.6vw;
   }
   /* Хедер */
@@ -113,22 +114,22 @@ footer {
     height: 6.6vw;
     padding: 1.1vw 3vw;
     .header__left {
-      flex-basis: 25%;
+      flex-basis: 40%;
       .header__name {
-        font-size: 2.23vw;
+        font-size: 2.2vw;
       }
       .header__job {
-        font-size: 1vw;
-        padding-top: 0.5vw;
+        font-size: 1.2vw;
+        line-height: 1.8vw;
       }
     }
     .header__menu {
-      flex-basis: 70%;
+      flex-basis: 60%;
       align-items: center;
       .header__nav {
         justify-content: space-between;
         a {
-          font-size: 1.1vw;
+          font-size: 1.2vw;
         }
       }
     }
@@ -323,7 +324,7 @@ footer {
       }
     }
     .footer__name {
-      font-size: 1.1vw;
+      font-size: 1.3vw;
     }
   }
 }
@@ -339,8 +340,8 @@ footer {
   }
   #services,
   #offer,
-  #signup,
-  #advice {
+  #about,
+  #signup {
     scroll-margin-top: 8.2vw;
   }
   /* Хедер */
@@ -351,12 +352,12 @@ footer {
       display: flex;
       align-items: center;
       flex-basis: 100%;
-      gap: 12vw;
+      gap: 7vw;
       .header__name {
-        font-size: 4.2vw;
+        font-size: 3.5vw;
       }
       .header__job {
-        font-size: 2.1vw;
+        font-size: 2.3vw;
         padding-top: 0.5vw;
         font-weight: bolder;
       }
@@ -366,18 +367,18 @@ footer {
       top: 8.6vw;
       right: -50%;
       height: 20vw;
-      width: 44vw;
+      width: 23vw;
       background-color: rgba(200, 177, 164, 0.845);
       z-index: 50;
       transition: all 1s;
       .header__nav {
+        padding-top: 1vw;
         flex-direction: column;
         align-items: end;
         gap: 1vw;
         padding-right: 1.5vw;
         a {
-          font-size: 1.9vw;
-          text-transform: uppercase;
+          font-size: 2.2vw;
         }
       }
     }
@@ -399,17 +400,17 @@ footer {
       height: 0.3vw;
     }
     .header__burger::before {
-      top: 2vw;
+      top: 2.5vw;
     }
     .header__burger::after {
-      top: 4.6vw;
+      top: 5.1vw;
     }
     .header__burger span {
       background-color: $colorWhite;
       position: absolute;
       width: 100%;
       height: 0.3vw;
-      top: 3.3vw;
+      top: 3.8vw;
       transition: all 0.1s;
     }
     .header__burger.active::before {
@@ -519,11 +520,11 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     .footer__left {
-      flex-basis: 70%;
+      flex-basis: 72%;
       justify-content: center;
     }
     .footer__right {
-      flex-basis: 25%;
+      flex-basis: 23%;
       justify-content: center;
       gap: 4vw;
       .footer__media {
@@ -546,10 +547,10 @@ footer {
   .subtitle {
     @include h2-mobile;
   }
+  #about,
   #services,
   #offer,
   #signup,
-  #advice,
   #sertificates {
     scroll-margin-top: 14.8vw;
   }
@@ -558,7 +559,6 @@ footer {
   }
   /* Хедер */
   .header {
-    height: 15vw;
     padding: 2vw 4vw;
     .header__left {
       display: flex;
@@ -568,7 +568,7 @@ footer {
         font-size: 6.3vw;
       }
       .header__job {
-        font-size: 2.9vw;
+        font-size: 3.9vw;
         font-weight: bolder;
       }
     }
@@ -580,7 +580,7 @@ footer {
       width: 100%;
       background-color: rgba(200, 177, 164, 0.899);
       z-index: -1;
-      transition: all 1.2s;
+      transition: all 1s;
       .header__nav {
         width: 100%;
         margin-top: 25%;
@@ -611,26 +611,26 @@ footer {
       height: 0.5vw;
     }
     .header__burger::before {
-      top: 1vw;
+      top: 3vw;
     }
     .header__burger::after {
-      top: 6.6vw;
+      top: 8.6vw;
     }
     .header__burger span {
       background-color: $colorWhite;
       position: absolute;
       width: 100%;
       height: 0.5vw;
-      top: 4vw;
+      top: 6vw;
       transition: all 0.1s;
     }
     .header__burger.active::before {
       transform: rotate(45deg);
-      top: 3.2vw;
+      top: 5.2vw;
     }
     .header__burger.active::after {
       transform: rotate(-45deg);
-      top: 3.2vw;
+      top: 5.2vw;
     }
     .header__burger.active span {
       transform: scale(0);
