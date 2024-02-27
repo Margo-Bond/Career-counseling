@@ -37,21 +37,24 @@
   font-size: 1.3vw;
   line-height: 1.5vw;
   font-weight: 400;
+  text-align: justify;
 }
 @mixin text-tablet {
   font-size: 1.8vw;
   line-height: 2vw;
   font-weight: 400;
+  text-align: justify;
 }
 @mixin text-mobile {
   font-size: 2.5vw;
   line-height: 2.5vw;
   font-weight: 400;
+  text-align: justify;
 }
-@mixin button-cost($brdradiussise){
-  border-radius: $brdradiussise;
+@mixin button-cost($border-radius, $padding) {
   border: none;
-  background-color: $colorFrame;  
+  background-color: $colorFrame;
   color: $colorWhite;
+  border-radius: $border-radius;
+  padding: $padding;
 }
-
