@@ -12,8 +12,24 @@ main,
 footer {
   width: 100%;
 }
-.main {
-  font-family: $fontPoppins;
+.header__name {
+  font-family: $fontLogo;
+}
+.header,
+.main__block,
+.footer {
+  font-family: $fontContent;
+}
+.header,
+.about,
+.signup,
+.footer {
+  color: $colorWhite;
+}
+.services,
+.offer,
+.free-advice,
+.sertificates {
   color: $colorBlack;
 }
 
@@ -27,11 +43,8 @@ footer {
   top: 0;
   left: 0;
   z-index: 50;
-  .header__name {
-    font-family: $fontPattaya;
-  }
   .header__job {
-    font-family: $fontPoppins;
+    /*font-family: $fontContent;*/
     font-weight: bold;
   }
 }
@@ -46,7 +59,19 @@ footer {
     }
   }
 }
-
+/* Main */
+.about {
+}
+.services {
+}
+.offer {
+}
+.free-advice {
+}
+.signup {
+}
+.sertificates {
+}
 /* Футер */
 .footer {
   color: $colorWhite;
@@ -63,7 +88,7 @@ footer {
     }
   }
   .footer__name {
-    font-family: $fontPoppins;
+    /*font-family: $fontContent;*/
   }
 }
 
@@ -153,12 +178,18 @@ footer {
       grid-template-columns: 0.3fr 1fr;
       padding: 2vw 5vw;
       gap: 3vw;
+      border: 1px solid;
       .service__picture {
-        img {
-          max-width: 100%;
-          max-height: 100%;
+        border: 1px solid;
+        .service__img {
+          width: 100%;
+          height: 100%;
           border: 5px solid $colorFrame;
+          border: 1px solid red;
         }
+      }
+      .service__picture_short {
+        height: 80%;
       }
       .service__desc {
         display: flex;
@@ -172,14 +203,14 @@ footer {
         .service__list {
           @include text;
         }
-        .service__cost_bold {
+        .service__cost {
           font-weight: 700;
         }
         .service__list {
           display: flex;
           flex-direction: column;
           list-style-position: inside;
-          gap: 0, 5мц;
+          gap: 0.5vw;
         }
         .service__button {
           padding: 0.5vw;

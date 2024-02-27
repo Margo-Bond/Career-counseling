@@ -19,8 +19,27 @@ footer {
   width: 100%;
 }
 
-.main {
+.header__name {
+  font-family: "Pattaya", sans-serif;
+}
+
+.header,
+.main__block,
+.footer {
   font-family: "Poppins", sans-serif;
+}
+
+.header,
+.about,
+.signup,
+.footer {
+  color: rgb(255, 255, 255);
+}
+
+.services,
+.offer,
+.free-advice,
+.sertificates {
   color: rgb(0, 0, 0);
 }
 
@@ -35,11 +54,8 @@ footer {
   left: 0;
   z-index: 50;
 }
-.header .header__name {
-  font-family: "Pattaya", sans-serif;
-}
 .header .header__job {
-  font-family: "Poppins", sans-serif;
+  /*font-family: $fontContent;*/
   font-weight: bold;
 }
 
@@ -55,6 +71,7 @@ footer {
   color: rgb(255, 255, 255);
 }
 
+/* Main */
 /* Футер */
 .footer {
   color: rgb(255, 255, 255);
@@ -72,7 +89,7 @@ footer {
   filter: brightness(0.8);
 }
 .footer .footer__name {
-  font-family: "Poppins", sans-serif;
+  /*font-family: $fontContent;*/
 }
 
 /* >1024px */
@@ -163,11 +180,19 @@ footer {
     grid-template-columns: 0.3fr 1fr;
     padding: 2vw 5vw;
     gap: 3vw;
+    border: 1px solid;
   }
-  .services .service .service__picture img {
-    max-width: 100%;
-    max-height: 100%;
+  .services .service .service__picture {
+    border: 1px solid;
+  }
+  .services .service .service__picture .service__img {
+    width: 100%;
+    height: 100%;
     border: 5px solid rgba(134, 85, 69, 0.7);
+    border: 1px solid red;
+  }
+  .services .service .service__picture_short {
+    height: 80%;
   }
   .services .service .service__desc {
     display: flex;
@@ -186,14 +211,14 @@ footer {
     line-height: 1.5vw;
     font-weight: 400;
   }
-  .services .service .service__desc .service__cost_bold {
+  .services .service .service__desc .service__cost {
     font-weight: 700;
   }
   .services .service .service__desc .service__list {
     display: flex;
     flex-direction: column;
     list-style-position: inside;
-    gap: 0, 5мц;
+    gap: 0.5vw;
   }
   .services .service .service__desc .service__button {
     padding: 0.5vw;
