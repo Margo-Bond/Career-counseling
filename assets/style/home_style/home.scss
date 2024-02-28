@@ -137,7 +137,7 @@ footer {
   }
   /* Обо мне */
   .about {
-    padding-top: 10vw;
+    padding-top: 11vw;
     padding-bottom: 5vw;
     padding-left: 5vw;
     color: $colorWhite;
@@ -159,6 +159,7 @@ footer {
       text-align: center;
       text-indent: 2vw;
       width: 44vw;
+      align-content: space-around;
     }
     .story {
       padding-top: 2vw;
@@ -713,8 +714,8 @@ footer {
     color: $colorWhite;
     background-color: $colorAbout;
     .about-img {
-      width: 75vw;
-      height: 75vw;
+      width: 60vw;
+      height: 60vw;
       background: url(../../images/img_3038new.jpg);
       background-position-x: center;
       background-repeat: no-repeat;
