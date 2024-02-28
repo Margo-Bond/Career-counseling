@@ -5,8 +5,8 @@
 /* Пакетное предложение */
 /* Беспдатная консультация */
 /*Запись на консультацию */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ footer {
 
 .header__name,
 .header__job {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .header,
@@ -29,7 +29,7 @@ footer {
 .footer,
 .footer__name,
 a {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .header,
@@ -57,7 +57,6 @@ a {
   z-index: 50;
 }
 .header .header__job {
-  /*font-family: $fontContent;*/
   font-weight: bold;
 }
 
@@ -322,7 +321,7 @@ a {
     place-items: center;
     padding: 2vw 5vw;
     -moz-column-gap: 5vw;
-    column-gap: 5vw;
+         column-gap: 5vw;
   }
   .sertificates .sertificates__wrap .sertificates__img {
     max-width: 100%;
@@ -417,7 +416,7 @@ a {
   }
   .header .header__burger::before,
   .header .header__burger::after {
-    content: '';
+    content: "";
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 100%;
@@ -635,7 +634,7 @@ a {
     place-items: center;
     padding: 3vw;
     -moz-column-gap: 5vw;
-    column-gap: 5vw;
+         column-gap: 5vw;
   }
   .sertificates .sertificates__wrap .sertificates__img {
     max-height: 100%;
@@ -730,7 +729,7 @@ a {
   }
   .header .header__burger::before,
   .header .header__burger::after {
-    content: '';
+    content: "";
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 100%;
@@ -971,7 +970,7 @@ a {
     justify-content: center;
     padding: 3vw;
     -moz-column-gap: 5vw;
-    column-gap: 5vw;
+         column-gap: 5vw;
   }
   .sertificates .sertificates__wrap .sertificates__img {
     max-width: 100%;
@@ -997,4 +996,4 @@ a {
   .footer .footer__name {
     font-size: 3.5vw;
   }
-} /*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */
