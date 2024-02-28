@@ -93,6 +93,11 @@ a {
   .footer__name {
     font-weight: 600;
   }
+  .footer__bottom {
+    display: flex;
+    border: 1px solid red;
+    flex-direction: column;
+  }
 }
 
 /* >1024px */
@@ -606,7 +611,7 @@ a {
       }
     }
     .footer__name {
-      font-size: 2.7vw;
+      font-size: 2.6vw;
     }
   }
 }
