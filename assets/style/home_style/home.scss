@@ -257,7 +257,25 @@ a {
   }
   /* Бесплатная встреча */
   .free-advice {
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
     background-color: $colorFreeAdvice;
+    border-radius: 50px;
+    .free-advice__wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3vw;
+      .free-advice__text {
+        @include text;
+      }
+    }
+    .free-advice__picture {
+      width: 40%;
+      .free-advice__img {
+        max-width: 100%;
+      }
+    }
   }
   /* Запись на консультацию */
   .signup {
@@ -542,7 +560,25 @@ a {
   }
   /* Бесплатная встреча */
   .free-advice {
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
     background-color: $colorFreeAdvice;
+    border-radius: 50px;
+    .free-advice__wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3vw;
+      .free-advice__text {
+        @include text-tablet;
+      }
+    }
+    .free-advice__picture {
+      width: 100%;
+      .free-advice__img {
+        max-width: 100%;
+      }
+    }
   }
   /* Запись на консультацию */
   .signup {
@@ -849,7 +885,26 @@ a {
   }
   /* Бесплатная встреча */
   .free-advice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
     background-color: $colorFreeAdvice;
+    border-radius: 50px;
+    .free-advice__wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3vw;
+      .free-advice__text {
+        @include text-mobile;
+      }
+    }
+    .free-advice__picture {
+      width: 70%;
+      .free-advice__img {
+        max-width: 100%;
+      }
+    }
   }
   /* Запись на консультацию */
   .signup {
