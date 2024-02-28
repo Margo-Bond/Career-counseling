@@ -144,9 +144,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 11vw;
-    padding-bottom: 5vw;
-    padding-left: 5vw;
+    padding: 5vw 3vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
     display: flex;
@@ -454,9 +452,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 10vw;
-    padding-bottom: 5vw;
-    padding-left: 5vw;
+    padding: 5vw 7vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
     display: flex;
@@ -673,7 +669,7 @@ a {
   }
   .subtitle {
     font-size: 4.5vw;
-    line-height: 3vw;
+    line-height: 4.5vw;
     font-weight: 700;
   }
   #about,
@@ -767,7 +763,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 17vw;
+    padding: 7vw 0;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
   }
@@ -780,13 +776,13 @@ a {
     background-size: auto 90vw;
     border-radius: 50%;
     border: 2.5px solid rgba(134, 85, 69, 0.7);
-    margin: 0 auto;
+    margin: 0 auto 3vw;
   }
   .about .about__text {
     padding-top: 2vw;
     text-align: center;
     font-size: 4.5vw;
-    line-height: 3vw;
+    line-height: 4.5vw;
     font-weight: 700;
   }
   .about .story {
@@ -934,13 +930,12 @@ a {
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(134, 85, 69, 0.7);
-    height: 10vw;
     display: flex;
     gap: 1vw;
   }
   .signup .signuptext {
     font-size: 4.5vw;
-    line-height: 3vw;
+    line-height: 4.5vw;
     font-weight: 700;
     display: flex;
     align-items: center;

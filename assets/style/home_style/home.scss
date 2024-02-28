@@ -143,9 +143,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 11vw;
-    padding-bottom: 5vw;
-    padding-left: 5vw;
+    padding: 5vw 3vw;
     color: $colorWhite;
     background-color: $colorAbout;
     display: flex;
@@ -428,9 +426,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 10vw;
-    padding-bottom: 5vw;
-    padding-left: 5vw;
+    padding: 5vw 7vw;
     color: $colorWhite;
     background-color: $colorAbout;
     display: flex;
@@ -715,7 +711,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 17vw;
+    padding: 7vw 0;
     color: $colorWhite;
     background-color: $colorAbout;
     .about-img {
@@ -727,7 +723,7 @@ a {
       background-size: auto 90vw;
       border-radius: 50%;
       border: 2.5px solid $colorFrame;
-      margin: 0 auto;
+      margin: 0 auto 3vw;
     }
     .about__text {
       padding-top: 2vw;
@@ -859,7 +855,6 @@ a {
   .signup {
     color: $colorWhite;
     background-color: $colorSignUp;
-    height: 10vw;
     .signuptext {
       @include h2-mobile;
       display: flex;
