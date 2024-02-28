@@ -212,6 +212,9 @@ footer {
         }
       }
     }
+    .service_top {
+      padding-top: 3vw;
+    }
     .service_reverse {
       grid-template-columns: 1fr 0.3fr;
     }
@@ -460,9 +463,9 @@ footer {
       padding: 2vw 0;
       gap: 3vw;
       .service__picture {
-        img {
+        .service__img {
           max-width: 100%;
-          max-height: 100%;
+          min-height: 17vw;
           border: 5px solid $colorFrame;
         }
       }
@@ -479,9 +482,6 @@ footer {
           @include text-tablet;
         }
         .service__cost {
-          line-height: 3vw;
-        }
-        .service__cost_bold {
           font-weight: 700;
         }
         .service__list {
@@ -739,6 +739,9 @@ footer {
   }
   /* Основные услуги */
   .services {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
     background-color: $colorWhite;
     .service {
       display: grid;
@@ -748,9 +751,8 @@ footer {
       gap: 3vw;
       .service__picture {
         display: flex;
-        justify-content: flex-start;
-        img {
-          justify-self: center;
+        justify-content: center;
+        .service__img {
           max-width: 40%;
           max-height: 100%;
           border: 4px solid $colorFrame;
@@ -759,7 +761,7 @@ footer {
       .service__desc {
         display: flex;
         flex-direction: column;
-        gap: 1.5vw;
+        gap: 3vw;
         .service__name {
           @include h3-mobile;
         }
@@ -778,7 +780,11 @@ footer {
           display: flex;
           flex-direction: column;
           list-style-position: inside;
-          gap: 0.5vw;
+          gap: 2vw;
+        }
+        .service__list-item {
+          text-align: justify;
+          list-style-position: inside;
         }
         .button-cost {
           @include button-cost(7px, 1vw);
@@ -795,12 +801,11 @@ footer {
       grid-template-rows: 0.6fr 1fr;
       justify-content: end;
       .service__desc_order {
-        text-align: right;
         order: 2;
       }
       .service__picture_order {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         order: 1;
       }
     }
