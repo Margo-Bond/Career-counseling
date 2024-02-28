@@ -20,10 +20,9 @@
       <div class="header__menu">
         <nav class="header__nav">
           <a href="#about">Обо мне</a>
-          <a href="#services">Основные услуги</a>
-          <a href="#offer">Пакетное предложение</a>
-          <a href="#signup">Запись на консультацию</a>
-          <a href="#advice">Бесплатная ознакомительная встреча</a>
+          <a href="#services">Услуги</a>
+          <a href="#offer">Предложение</a>
+          <a href="#signup">Запись</a>
           <a href="#sertificates">Сертификаты</a>
         </nav>
       </div>
@@ -64,7 +63,8 @@
             <img
               src="./assets/images/cv.jpg"
               class="service__img"
-              alt="Резюме" />
+              alt="Резюме"
+            />
           </div>
           <div class="service__desc">
             <h3 class="service__name">Создание эффективного резюме</h3>
@@ -102,7 +102,8 @@
             <img
               src="./assets/images/interview.jpg"
               class="service__img"
-              alt="Подготовительное интервью" />
+              alt="Подготовительное интервью"
+            />
           </div>
         </div>
         <div class="service service_express">
@@ -110,7 +111,8 @@
             <img
               src="./assets/images/express.jpg"
               class="service__img"
-              alt="Поиск работы" />
+              alt="Поиск работы"
+            />
           </div>
           <div class="service__desc">
             <h3 class="service__name">Экспресс-подготовка к поиску работы</h3>
@@ -197,11 +199,13 @@
           <a
             href="tg://resolve?domain=NatalyaKov"
             target="_blank"
-            class="signuplinkimg">
+            class="signuplinkimg"
+          >
             <img
               src="./assets/images/telegram.svg"
               alt="Telegram"
-              class="signuplinkimg" />
+              class="signuplinkimg"
+            />
           </a>
           <a
             class="signuplinklink"
@@ -218,11 +222,13 @@
           <img
             src="./assets/images/sertificate2.png"
             class="sertificates__img"
-            alt="Сертификат 1" />
+            alt="Сертификат 1"
+          />
           <img
             src="./assets/images/sertificate1.png"
             class="sertificates__img"
-            alt="Сертификат 2" />
+            alt="Сертификат 2"
+          />
         </div>
       </div>
     </main>
@@ -234,62 +240,70 @@
         </p>
       </div>
       <div class="footer__right">
-        <a href="#" target="_blank" class="footer__media">
+        <a href="https://t.me/NatalyaKov" target="_blank" class="footer__media">
           <img
             src="./assets/images/telegram.svg"
             alt="Telegram"
-            class="footer__media footer__media_telegram" />
+            class="footer__media footer__media_telegram"
+          />
         </a>
-        <a href="#" target="_blank" class="footer__media">
+        <a
+          href="https://api.whatsapp.com/send?phone=79101020469"
+          target="_blank"
+          class="footer__media"
+        >
           <img
             src="./assets/images/whatsapp.svg"
             alt="Whatsapp"
-            class="footer__media footer__media_whatsapp" />
+            class="footer__media footer__media_whatsapp"
+          />
         </a>
         <a
           href="https://hrtime.ru/profile/72239/"
           target="_blank"
-          class="footer__media">
+          class="footer__media"
+        >
           <img
             src="./assets/images/site.svg"
             alt="HRTime"
-            class="footer__media footer__media_telegram" />
+            class="footer__media footer__media_telegram"
+          />
         </a>
       </div>
     </footer>
     <script>
       function showCost1(button) {
         const paragraph = button.parentNode;
-        const service__cost = document.createTextNode("10 000 ₽");
+        const service__cost = document.createTextNode('10 000 ₽');
         paragraph.removeChild(button);
         paragraph.appendChild(service__cost);
       }
       function showCost2(button) {
         const paragraph = button.parentNode;
-        const service__cost = document.createTextNode("от 10 000 ₽");
+        const service__cost = document.createTextNode('от 10 000 ₽');
         paragraph.removeChild(button);
         paragraph.appendChild(service__cost);
       }
       function showCost3(button) {
         const paragraph = button.parentNode;
-        const service__cost = document.createTextNode("25 000 ₽");
+        const service__cost = document.createTextNode('25 000 ₽');
         paragraph.removeChild(button);
         paragraph.appendChild(service__cost);
       }
       function showCost4(button) {
         const paragraph = button.parentNode;
-        const offer__cost = document.createTextNode("50 000 рублей");
+        const offer__cost = document.createTextNode('50 000 рублей');
         paragraph.removeChild(button);
         paragraph.appendChild(offer__cost);
       }
     </script>
     <script>
       document
-        .querySelector(".header__burger")
-        .addEventListener("click", function () {
-          this.classList.toggle("active");
-          document.querySelector(".header__menu").classList.toggle("active");
-          document.querySelector("body").classList.toggle("lock");
+        .querySelector('.header__burger')
+        .addEventListener('click', function () {
+          this.classList.toggle('active');
+          document.querySelector('.header__menu').classList.toggle('active');
+          document.querySelector('body').classList.toggle('lock');
         });
     </script>
   </body>
