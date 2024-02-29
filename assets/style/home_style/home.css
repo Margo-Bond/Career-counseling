@@ -43,7 +43,7 @@ a {
 .offer,
 .free-advice,
 .sertificates {
-  color: rgb(0, 0, 0);
+  color: rgb(80, 49, 40);
 }
 
 /* Хедер */
@@ -163,9 +163,8 @@ a {
   }
   .about .about__text {
     text-align: center;
-    text-indent: 2vw;
     width: 44vw;
-    align-content: space-around;
+    text-indent: 3vw;
   }
   .about .story {
     padding-top: 2vw;
@@ -173,9 +172,6 @@ a {
     line-height: 1.5vw;
     font-weight: 400;
     text-align: justify;
-  }
-  .about .story .newlinetext {
-    display: block;
   }
   /* Основные услуги */
   .services {
@@ -221,7 +217,7 @@ a {
   }
   .services .service .service__desc .button-cost {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0.5vw;
@@ -259,11 +255,25 @@ a {
     text-align: justify;
   }
   .offer .descriptionoffer .descriptionbody .offer__list {
-    padding-top: 1.5vw;
+    padding-top: 1vw;
+    display: flex;
+    height: 4vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick {
+    width: 2vw;
+    height: 2vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick .tick-img {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-text {
+    padding-left: 0.5vw;
+    padding-top: 0.2vw;
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0.5vw;
@@ -552,7 +562,7 @@ a {
   }
   .services .service .service__desc .button-cost {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 0.7vw;
@@ -590,12 +600,25 @@ a {
     text-align: justify;
   }
   .offer .descriptionoffer .descriptionbody .offer__list {
-    padding-top: 1.5vw;
+    padding-top: 1vw;
+    display: flex;
+    height: 5vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick {
+    width: 2vw;
+    height: 2vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick .tick-img {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-text {
+    padding-left: 0.5vw;
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     padding: 0.5vw;
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 0.7vw;
@@ -897,7 +920,7 @@ a {
   }
   .services .service .service__desc .button-cost {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 1vw;
@@ -926,11 +949,11 @@ a {
   /* Пакетное предложение */
   .offer {
     background-color: rgba(198, 157, 144, 0.7);
+    padding-top: 3vw;
   }
   .offer .descriptionoffer {
-    margin-top: 2vw;
-    padding: 1vw;
     padding-left: 2.5vw;
+    padding-right: 2.7vw;
     background-color: rgb(255, 255, 255);
   }
   .offer .descriptionoffer .descriptiontitle {
@@ -938,6 +961,8 @@ a {
     font-size: 4vw;
     line-height: 3vw;
     font-weight: 700;
+    margin-top: 2vw;
+    padding: 3vw;
   }
   .offer .descriptionoffer .descriptionbody {
     padding: 2vw;
@@ -948,11 +973,23 @@ a {
     text-align: justify;
   }
   .offer .descriptionoffer .descriptionbody .offer__list {
-    padding-top: 1.5vw;
+    padding-top: 3vw;
+    display: flex;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick {
+    width: 4vw;
+    height: 4vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick .tick-img {
+    width: 3.8vw;
+    height: 3.8vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-text {
+    padding-left: 0.7vw;
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 1vw;

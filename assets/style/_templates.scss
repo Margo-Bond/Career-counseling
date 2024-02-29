@@ -53,7 +53,7 @@
 }
 @mixin button-cost($border-radius, $padding) {
   border: none;
-  background-color: $colorFrame;
+  background-color: $colorButton;
   color: $colorWhite;
   border-radius: $border-radius;
   padding: $padding;
