@@ -34,7 +34,8 @@ a {
 .offer,
 .free-advice,
 .sertificates {
-  color: $colorBlack;
+  //color: $colorBlack;
+  color: $colorBroun;
 }
 
 /* Хедер */
@@ -161,16 +162,12 @@ a {
     }
     .about__text {
       text-align: center;
-      text-indent: 2vw;
       width: 44vw;
-      align-content: space-around;
+      text-indent: 3vw;
     }
     .story {
       padding-top: 2vw;
       @include text;
-      .newlinetext {
-        display: block;
-      }
     }
   }
   /* Основные услуги */
@@ -240,10 +237,24 @@ a {
         text-align: left;
         @include text;
         .offer__list {
-          padding-top: 1.5vw;
+          padding-top: 1vw;
+          display: flex;
+          height: 4vw;
+          .offer-tick {
+            width: 2vw;
+            height: 2vw;
+            .tick-img {
+              width: 1.8vw;
+              height: 1.8vw;
+            }
+          }
+          .offer-text {
+            padding-left: 0.5vw;
+            padding-top: 0.2vw;
+          }
         }
         .offer__button {
-          @include button-cost(10px, 0.5vw);
+          @include button-cost(10px, 0.5vw);          
         }
         .offer__button:hover {
           cursor: pointer;
@@ -542,11 +553,24 @@ a {
         text-align: left;
         @include text-tablet;
         .offer__list {
-          padding-top: 1.5vw;
+          padding-top: 1vw;
+          display: flex;
+          height: 5vw;
+          .offer-tick {
+            width: 2vw;
+            height: 2vw;
+            .tick-img {
+              width: 1.8vw;
+              height: 1.8vw;
+            }
+          }
+          .offer-text {
+            padding-left: 0.5vw;           
+          }
         }
         .offer__button {
           padding: 0.5vw;
-          @include button-cost(7px, 0.7vw);
+          @include button-cost(7px, 0.7vw);          
         }
         .offer__button:hover {
           cursor: pointer;
@@ -854,21 +878,35 @@ a {
   /* Пакетное предложение */
   .offer {
     background-color: $colorOffer;
-    .descriptionoffer {
-      margin-top: 2vw;
-      padding: 1vw;
+    padding-top: 3vw;
+    .descriptionoffer { 
       padding-left: 2.5vw;
+      padding-right: 2.7vw;
       background-color: $colorWhite;
       .descriptiontitle {
         text-align: center;
         @include h3-mobile;
+        margin-top: 2vw;
+        padding: 3vw;
       }
       .descriptionbody {
         padding: 2vw;
         text-align: left;
         @include text-mobile;
         .offer__list {
-          padding-top: 1.5vw;
+          padding-top: 3vw;
+          display: flex;         
+          .offer-tick {
+            width: 4vw;
+            height: 4vw;
+            .tick-img {
+              width: 3.8vw;
+              height: 3.8vw;
+            }
+          }
+          .offer-text {
+            padding-left: 0.7vw;           
+          }
         }
         .offer__button {
           @include button-cost(7px, 1vw);
