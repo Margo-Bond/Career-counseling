@@ -68,14 +68,58 @@ a {
 .about {
 }
 .services {
+  background-color: $colorWhite;
+  .service {
+    display: grid;
+    gap: 3vw;
+    .service__img {
+      height: 100%;
+    }
+    .service__desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .service__list {
+        display: flex;
+        flex-direction: column;
+        list-style-position: inside;
+      }
+      .service__list-item {
+        display: flex;
+      }
+      .service__button:hover {
+        cursor: pointer;
+      }
+      .service__cost {
+        font-weight: 700;
+      }
+    }
+  }
 }
 .offer {
 }
 .free-advice {
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+  background-color: $colorFreeAdvice;
+  .free-advice__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .free-advice__img {
+    max-width: 100%;
+  }
 }
 .signup {
 }
 .sertificates {
+  background-color: $colorWhite;
+  .sertificates__wrap {
+    display: grid;
+    column-gap: 5vw;
+  }
 }
 /* Футер */
 .footer {
@@ -171,55 +215,43 @@ a {
     }
   }
   /* Основные услуги */
-  .services {
-    background-color: $colorWhite;
-    .service {
-      display: grid;
-      grid-template-columns: 0.3fr 1fr;
-      padding: 2vw 5vw;
-      gap: 3vw;
-      .service__picture {
-        .service__img {
-          width: 100%;
-          height: 100%;
-          border: 5px solid $colorFrame;
-        }
-      }
-      .service__desc {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5vw;
-        .service__name {
-          @include h3;
-        }
-        .service__text,
-        .service__cost,
-        .service__list {
-          @include text;
-        }
-        .service__cost {
-          font-weight: 700;
-        }
-        .service__list {
-          display: flex;
-          flex-direction: column;
-          list-style-position: inside;
-          gap: 0.5vw;
-        }
-        .button-cost {
-          @include button-cost(10px, 0.5vw);
-        }
-        .button-cost:hover {
-          cursor: pointer;
-        }
-      }
+  .service {
+    grid-template-columns: 0.3fr 1fr;
+    padding: 2vw 0;
+    .service__img {
+      width: 100%;
+      border: 5px solid $colorFrame;
     }
-    .service_top {
-      padding-top: 3vw;
+    .service__name {
+      @include h3;
     }
-    .service_reverse {
-      grid-template-columns: 1fr 0.3fr;
+    .service__text,
+    .service__cost,
+    .service__list {
+      @include text;
     }
+    .service__list,
+    .service__list-item {
+      gap: 1vw;
+    }
+    .service__mark {
+      width: 1.8vw;
+      height: 1.8vw;
+    }
+    .service__button {
+      @include button-cost(10px, 0.5vw);
+    }
+  }
+  .service_top {
+    grid-template-rows: 12vw;
+    padding-top: 3vw;
+  }
+  .service_reverse {
+    grid-template-rows: 12vw;
+    grid-template-columns: 1fr 0.3fr;
+  }
+  .service_express {
+    grid-template-rows: 20vw;
   }
   /* Пакетное предложение */
   .offer {
@@ -254,7 +286,7 @@ a {
           }
         }
         .offer__button {
-          @include button-cost(10px, 0.5vw);          
+          @include button-cost(10px, 0.5vw);
         }
         .offer__button:hover {
           cursor: pointer;
@@ -267,26 +299,11 @@ a {
     }
   }
   /* Бесплатная встреча */
-  .free-advice {
-    display: flex;
-    justify-content: space-between;
-    gap: 3vw;
-    background-color: $colorFreeAdvice;
-    border-radius: 50px;
-    .free-advice__wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 3vw;
-      .free-advice__text {
-        @include text;
-      }
-    }
-    .free-advice__picture {
-      width: 40%;
-      .free-advice__img {
-        max-width: 100%;
-      }
-    }
+  .free-advice__text {
+    @include text;
+  }
+  .free-advice__picture {
+    width: 40%;
   }
   /* Запись на консультацию */
   .signup {
@@ -319,20 +336,14 @@ a {
     }
   }
   /* Сертификаты */
-  .sertificates {
-    background-color: $colorWhite;
-    .sertificates__wrap {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 20vw;
-      place-items: center;
-      padding: 2vw 5vw;
-      column-gap: 5vw;
-      .sertificates__img {
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-      }
+  .sertificates__wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20vw;
+    place-items: center;
+    padding: 2vw 5vw;
+    .sertificates__img {
+      max-width: 100%;
+      max-height: 100%;
     }
   }
   /* Футер */
@@ -488,53 +499,46 @@ a {
   }
   /* Основные услуги */
   .services {
-    background-color: $colorWhite;
     .service {
-      display: grid;
       grid-template-columns: 0.4fr 1fr;
       padding: 2vw 0;
-      gap: 3vw;
-      .service__picture {
-        .service__img {
-          max-width: 100%;
-          min-height: 17vw;
-          border: 5px solid $colorFrame;
-        }
+      .service__img {
+        max-width: 100%;
+        border: 5px solid $colorFrame;
       }
-      .service__desc {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5vw;
-        .service__name {
-          @include h3-tablet;
-        }
-        .service__text,
-        .service__cost,
-        .service__list {
-          @include text-tablet;
-        }
-        .service__cost {
-          font-weight: 700;
-        }
-        .service__list {
-          display: flex;
-          flex-direction: column;
-          list-style-position: inside;
-          gap: 0.5vw;
-        }
-        .button-cost {
-          @include button-cost(7px, 0.7vw);
-        }
-        .button-cost:hover {
-          cursor: pointer;
-        }
+      .service__name {
+        @include h3-tablet;
+      }
+      .service__text,
+      .service__cost,
+      .service__list {
+        @include text-tablet;
+      }
+      .service__list,
+      .service__list-item {
+        gap: 1vw;
+      }
+      .service__mark {
+        width: 1.8vw;
+        height: 1.8vw;
+      }
+      .service__button {
+        @include button-cost(7px, 0.7vw);
+      }
+      .service__button:active {
+        font-weight: 700;
       }
     }
     .service_top {
+      grid-template-rows: 19vw;
       padding-top: 3vw;
     }
     .service_reverse {
-      grid-template-columns: 1fr 0.4fr;
+      grid-template-columns: 1fr 0.5fr;
+      grid-template-rows: 19vw;
+    }
+    .service_express {
+      grid-template-rows: 31vw;
     }
   }
   /* Пакетное предложение */
@@ -556,6 +560,7 @@ a {
           padding-top: 1vw;
           display: flex;
           height: 5vw;
+          gap: 0.5vw;
           .offer-tick {
             width: 2vw;
             height: 2vw;
@@ -565,15 +570,18 @@ a {
             }
           }
           .offer-text {
-            padding-left: 0.5vw;           
+            padding-left: 0.5vw;
           }
         }
         .offer__button {
           padding: 0.5vw;
-          @include button-cost(7px, 0.7vw);          
+          @include button-cost(7px, 0.7vw);
         }
         .offer__button:hover {
           cursor: pointer;
+        }
+        .offer__button:active {
+          font-weight: 700;
         }
         .offer__cost {
           padding-top: 1.5vw;
@@ -583,26 +591,11 @@ a {
     }
   }
   /* Бесплатная встреча */
-  .free-advice {
-    display: flex;
-    justify-content: space-between;
-    gap: 3vw;
-    background-color: $colorFreeAdvice;
-    border-radius: 50px;
-    .free-advice__wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 3vw;
-      .free-advice__text {
-        @include text-tablet;
-      }
-    }
-    .free-advice__picture {
-      width: 100%;
-      .free-advice__img {
-        max-width: 100%;
-      }
-    }
+  .free-advice__text {
+    @include text-tablet;
+  }
+  .free-advice__picture {
+    width: 100%;
   }
   /* Запись на консультацию */
   .signup {
@@ -635,18 +628,13 @@ a {
     }
   }
   /* Сертификаты */
-  .sertificates {
-    background-color: $colorWhite;
-    .sertificates__wrap {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 25vw;
-      place-items: center;
-      padding: 3vw;
-      column-gap: 5vw;
-      .sertificates__img {
-        max-height: 100%;
-      }
+  .sertificates__wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 25vw;
+    place-items: center;
+    padding: 3vw;
+    .sertificates__img {
+      max-height: 100%;
     }
   }
   /* Футер */
@@ -803,27 +791,21 @@ a {
   .services {
     display: flex;
     flex-direction: column;
-    gap: 3vw;
-    background-color: $colorWhite;
+    gap: 6vw;
     .service {
-      display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 0.6fr 1fr;
-      padding: 2vw 0;
-      gap: 3vw;
       .service__picture {
         display: flex;
         justify-content: center;
         .service__img {
-          max-width: 40%;
-          max-height: 100%;
+          max-width: 55%;
           border: 4px solid $colorFrame;
         }
       }
       .service__desc {
-        display: flex;
-        flex-direction: column;
-        gap: 3vw;
+        align-items: center;
+        gap: 2vw;
         .service__name {
           @include h3-mobile;
         }
@@ -832,54 +814,40 @@ a {
         .service__list {
           @include text-mobile;
         }
-        .service__cost {
-          line-height: 3vw;
+        .service__list,
+        .service__list-item {
+          gap: 3vw;
         }
-        .service__cost_bold {
+        .service__mark {
+          width: 3.8vw;
+          height: 3.8vw;
+        }
+        .service__cost {
           font-weight: 700;
         }
-        .service__list {
-          display: flex;
-          flex-direction: column;
-          list-style-position: inside;
-          gap: 2vw;
-        }
-        .service__list-item {
-          text-align: justify;
-          list-style-position: inside;
-        }
-        .button-cost {
+        .service__button {
           @include button-cost(7px, 1vw);
         }
-        .button-cost:hover {
-          cursor: pointer;
+        .service__button:active {
+          font-weight: 700;
         }
       }
     }
-    .service_top {
-      padding-top: 4vw;
-    }
     .service_reverse {
-      grid-template-rows: 0.6fr 1fr;
-      justify-content: end;
+      grid-template-rows: 1fr 1fr;
       .service__desc_order {
         order: 2;
       }
       .service__picture_order {
-        display: flex;
-        justify-content: center;
         order: 1;
       }
-    }
-    .service_long {
-      grid-template-rows: 0.4fr 1fr;
     }
   }
   /* Пакетное предложение */
   .offer {
     background-color: $colorOffer;
     padding-top: 3vw;
-    .descriptionoffer { 
+    .descriptionoffer {
       padding-left: 2.5vw;
       padding-right: 2.7vw;
       background-color: $colorWhite;
@@ -891,11 +859,11 @@ a {
       }
       .descriptionbody {
         padding: 2vw;
-        text-align: left;
         @include text-mobile;
         .offer__list {
           padding-top: 3vw;
-          display: flex;         
+          display: flex;
+          gap: 2vw;
           .offer-tick {
             width: 4vw;
             height: 4vw;
@@ -904,9 +872,6 @@ a {
               height: 3.8vw;
             }
           }
-          .offer-text {
-            padding-left: 0.7vw;           
-          }
         }
         .offer__button {
           @include button-cost(7px, 1vw);
@@ -914,7 +879,11 @@ a {
         .offer__button:hover {
           cursor: pointer;
         }
+        .offer__button:active {
+          font-weight: 700;
+        }
         .offer__cost {
+          text-align: center;
           padding-top: 1.5vw;
           font-weight: 700;
         }
@@ -923,25 +892,13 @@ a {
   }
   /* Бесплатная встреча */
   .free-advice {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3vw;
-    background-color: $colorFreeAdvice;
-    border-radius: 50px;
-    .free-advice__wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 3vw;
-      .free-advice__text {
-        @include text-mobile;
-      }
+    .free-advice__text {
+      @include text-mobile;
     }
     .free-advice__picture {
       width: 70%;
-      .free-advice__img {
-        max-width: 100%;
-      }
     }
   }
   /* Запись на консультацию */
@@ -974,18 +931,13 @@ a {
     }
   }
   /* Сертификаты */
-  .sertificates {
-    background-color: $colorWhite;
-    .sertificates__wrap {
-      display: grid;
-      grid-template-columns: minmax(300px, 0.6fr);
-      grid-template-rows: repeat(2, 1fr);
-      justify-content: center;
-      padding: 3vw;
-      column-gap: 5vw;
-      .sertificates__img {
-        max-width: 100%;
-      }
+  .sertificates__wrap {
+    grid-template-columns: minmax(300px, 0.6fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    padding: 3vw;
+    .sertificates__img {
+      max-width: 100%;
     }
   }
   /* Футер */
