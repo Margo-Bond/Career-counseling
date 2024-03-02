@@ -27,7 +27,6 @@ footer {
 .header,
 .main__block,
 .footer,
-.footer__name,
 a {
   font-family: "Raleway", sans-serif;
 }
@@ -132,25 +131,35 @@ a {
 /* Футер */
 .footer {
   background-color: rgb(200, 178, 164);
-  display: flex;
   padding: 1.1vw 0;
 }
-.footer .footer__left {
+.footer .footer__main {
+  background-color: rgb(200, 178, 164);
   display: flex;
 }
-.footer .footer__right {
+.footer .footer__main .footer__left {
   display: flex;
 }
-.footer .footer__right .footer__media:hover {
+.footer .footer__main .footer__right {
+  display: flex;
+}
+.footer .footer__main .footer__right .footer__media:hover {
   filter: brightness(0.8);
 }
-.footer .footer__name {
+.footer .footer__main .footer__name {
   font-weight: 600;
 }
 .footer .footer__bottom {
   display: flex;
-  border: 1px solid red;
-  flex-direction: column;
+  justify-content: center;
+}
+.footer .footer__bottom .footer__school:hover {
+  filter: brightness(0.8);
+}
+.footer .footer__bottom a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
 }
 
 /* >1024px */
@@ -163,6 +172,7 @@ a {
     line-height: 2vw;
     font-weight: 700;
   }
+  #about,
   #services,
   #offer,
   #signup {
@@ -178,6 +188,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 2.2vw;
+    color: rgba(88, 65, 44, 0.8196078431);
   }
   .header .header__left .header__job {
     font-size: 1.2vw;
@@ -385,25 +396,33 @@ a {
     max-height: 100%;
   }
   /* Футер */
-  .footer {
-    justify-content: space-evenly;
+  .footer__main {
+    justify-content: center;
     align-items: center;
+    margin-bottom: 1vw;
+    gap: 4vw;
   }
-  .footer .footer__left {
-    flex-basis: 42%;
-    justify-content: end;
-  }
-  .footer .footer__right {
-    flex-basis: 35%;
-    justify-content: start;
+  .footer__main .footer__right {
     gap: 3vw;
   }
-  .footer .footer__right .footer__media {
+  .footer__main .footer__right .footer__media {
     width: 2vw;
     height: 2vw;
   }
-  .footer .footer__name {
+  .footer__main .footer__name {
     font-size: 1.3vw;
+  }
+  .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+  }
+  .footer__bottom .footer__development {
+    font-size: 1.1vw;
+  }
+  .footer__bottom .footer__school {
+    font-size: 1.1vw;
   }
 }
 /* 768-1023px */
@@ -435,6 +454,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 3.5vw;
+    color: rgba(88, 65, 44, 0.8196078431);
   }
   .header .header__left .header__job {
     font-size: 2.3vw;
@@ -704,25 +724,33 @@ a {
     max-height: 100%;
   }
   /* Футер */
-  .footer {
-    justify-content: space-evenly;
+  .footer__main {
+    margin-bottom: 1vw;
+    justify-content: center;
     align-items: center;
+    gap: 5vw;
   }
-  .footer .footer__left {
-    flex-basis: 72%;
-    justify-content: center;
-  }
-  .footer .footer__right {
-    flex-basis: 23%;
-    justify-content: center;
+  .footer__main .footer__right {
     gap: 4vw;
   }
-  .footer .footer__right .footer__media {
+  .footer__main .footer__right .footer__media {
     width: 3.5vw;
     height: 3.5vw;
   }
-  .footer .footer__name {
+  .footer__main .footer__name {
     font-size: 2.6vw;
+  }
+  .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+  }
+  .footer__bottom .footer__development {
+    font-size: 2.2vw;
+  }
+  .footer__bottom .footer__school {
+    font-size: 2.2vw;
   }
 }
 /* 320-767px */
@@ -756,6 +784,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 6.3vw;
+    color: rgba(88, 65, 44, 0.8196078431);
   }
   .header .header__left .header__job {
     font-size: 3.9vw;
@@ -1039,23 +1068,35 @@ a {
   }
   /* Футер */
   .footer {
+    padding: 2vw;
+  }
+  .footer__main {
     flex-direction: column;
-    gap: 3vw;
-    padding: 2vw 0 1.5vw;
-  }
-  .footer .footer__left {
     justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 4vw;
   }
-  .footer .footer__right {
-    flex-basis: 25%;
+  .footer__main .footer__right {
+    gap: 7vw;
+  }
+  .footer__main .footer__right .footer__media {
+    width: 5vw;
+    height: 5vw;
+  }
+  .footer__main .footer__name {
+    font-size: 3.4vw;
+  }
+  .footer__bottom {
+    display: flex;
     justify-content: center;
-    gap: 6vw;
+    align-items: center;
+    gap: 1vw;
   }
-  .footer .footer__right .footer__media {
-    width: 4.5vw;
-    height: 4.5vw;
+  .footer__bottom .footer__development {
+    font-size: 2.9vw;
   }
-  .footer .footer__name {
-    font-size: 3.5vw;
+  .footer__bottom .footer__school {
+    font-size: 2.9vw;
   }
 }/*# sourceMappingURL=home.css.map */

@@ -20,7 +20,6 @@ footer {
 .header,
 .main__block,
 .footer,
-.footer__name,
 a {
   font-family: $fontContent;
 }
@@ -124,24 +123,36 @@ a {
 /* Футер */
 .footer {
   background-color: $colorHeaderFooter;
-  display: flex;
   padding: 1.1vw 0;
-  .footer__left {
+
+  .footer__main {
+    background-color: $colorHeaderFooter;
     display: flex;
-  }
-  .footer__right {
-    display: flex;
-    .footer__media:hover {
-      filter: brightness(0.8);
+    .footer__left {
+      display: flex;
     }
-  }
-  .footer__name {
-    font-weight: 600;
+    .footer__right {
+      display: flex;
+      .footer__media:hover {
+        filter: brightness(0.8);
+      }
+    }
+    .footer__name {
+      font-weight: 600;
+    }
   }
   .footer__bottom {
     display: flex;
-    border: 1px solid red;
-    flex-direction: column;
+    justify-content: center;
+
+    .footer__school:hover {
+      filter: brightness(0.8);
+    }
+    a {
+      text-decoration: none;
+      color: $colorWhite;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -153,6 +164,7 @@ a {
   .subtitle {
     @include h2;
   }
+  #about,
   #services,
   #offer,
   #signup {
@@ -166,6 +178,7 @@ a {
       flex-basis: 40%;
       .header__name {
         font-size: 2.2vw;
+        color: $colorHeaderName;
       }
       .header__job {
         font-size: 1.2vw;
@@ -347,16 +360,12 @@ a {
     }
   }
   /* Футер */
-  .footer {
-    justify-content: space-evenly;
+  .footer__main {
+    justify-content: center;
     align-items: center;
-    .footer__left {
-      flex-basis: 42%;
-      justify-content: end;
-    }
+    margin-bottom: 1vw;
+    gap: 4vw;
     .footer__right {
-      flex-basis: 35%;
-      justify-content: start;
       gap: 3vw;
       .footer__media {
         width: 2vw;
@@ -365,6 +374,18 @@ a {
     }
     .footer__name {
       font-size: 1.3vw;
+    }
+  }
+  .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+    .footer__development {
+      font-size: 1.1vw;
+    }
+    .footer__school {
+      font-size: 1.1vw;
     }
   }
 }
@@ -394,6 +415,7 @@ a {
       gap: 7vw;
       .header__name {
         font-size: 3.5vw;
+        color: $colorHeaderName;
       }
       .header__job {
         font-size: 2.3vw;
@@ -638,16 +660,12 @@ a {
     }
   }
   /* Футер */
-  .footer {
-    justify-content: space-evenly;
+  .footer__main {
+    margin-bottom: 1vw;
+    justify-content: center;
     align-items: center;
-    .footer__left {
-      flex-basis: 72%;
-      justify-content: center;
-    }
+    gap: 5vw;
     .footer__right {
-      flex-basis: 23%;
-      justify-content: center;
       gap: 4vw;
       .footer__media {
         width: 3.5vw;
@@ -656,6 +674,18 @@ a {
     }
     .footer__name {
       font-size: 2.6vw;
+    }
+  }
+  .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    .footer__development {
+      font-size: 2.2vw;
+    }
+    .footer__school {
+      font-size: 2.2vw;
     }
   }
 }
@@ -687,6 +717,7 @@ a {
       flex-basis: 80%;
       .header__name {
         font-size: 6.3vw;
+        color: $colorHeaderName;
       }
       .header__job {
         font-size: 3.9vw;
@@ -942,23 +973,35 @@ a {
   }
   /* Футер */
   .footer {
+    padding: 2vw;
+  }
+  .footer__main {
     flex-direction: column;
-    gap: 3vw;
-    padding: 2vw 0 1.5vw;
-    .footer__left {
-      justify-content: center;
-    }
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 4vw;
     .footer__right {
-      flex-basis: 25%;
-      justify-content: center;
-      gap: 6vw;
+      gap: 7vw;
       .footer__media {
-        width: 4.5vw;
-        height: 4.5vw;
+        width: 5vw;
+        height: 5vw;
       }
     }
     .footer__name {
-      font-size: 3.5vw;
+      font-size: 3.4vw;
+    }
+  }
+  .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    .footer__development {
+      font-size: 2.9vw;
+    }
+    .footer__school {
+      font-size: 2.9vw;
     }
   }
 }
