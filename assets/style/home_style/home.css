@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/* Хедер, Футтер */
-/* Обо мне */
-/* Основные услуги */
-/* Пакетное предложение */
-/* Беспдатная консультация */
-/*Запись на консультацию */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
 * {
@@ -14,7 +8,7 @@
 }
 
 .header,
-main,
+.main__block,
 footer {
   width: 100%;
 }
@@ -41,7 +35,7 @@ a {
 .services,
 .offer,
 .free-advice,
-.sertificates {
+.certificates {
   color: rgb(80, 49, 40);
 }
 
@@ -119,10 +113,10 @@ a {
   max-width: 100%;
 }
 
-.sertificates {
+.certificates {
   background-color: rgb(255, 255, 255);
 }
-.sertificates .sertificates__wrap {
+.certificates .certificates__wrap {
   display: grid;
   -moz-column-gap: 5vw;
        column-gap: 5vw;
@@ -188,7 +182,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 2.2vw;
-    color: rgba(88, 65, 44, 0.8196078431);
+    color: rgb(88, 65, 44);
   }
   .header .header__left .header__job {
     font-size: 1.2vw;
@@ -385,13 +379,13 @@ a {
     color: rgb(255, 255, 255);
   }
   /* Сертификаты */
-  .sertificates__wrap {
+  .certificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20vw;
     place-items: center;
     padding: 2vw 5vw;
   }
-  .sertificates__wrap .sertificates__img {
+  .certificates__wrap .certificates__img {
     max-width: 100%;
     max-height: 100%;
   }
@@ -454,7 +448,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 3.5vw;
-    color: rgba(88, 65, 44, 0.8196078431);
+    color: rgb(88, 65, 44);
   }
   .header .header__left .header__job {
     font-size: 2.3vw;
@@ -714,14 +708,15 @@ a {
     color: rgb(255, 255, 255);
   }
   /* Сертификаты */
-  .sertificates__wrap {
+  .certificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 25vw;
     place-items: center;
     padding: 3vw;
   }
-  .sertificates__wrap .sertificates__img {
+  .certificates__wrap .certificates__img {
     max-height: 100%;
+    max-width: 100%;
   }
   /* Футер */
   .footer__main {
@@ -767,7 +762,7 @@ a {
   #services,
   #offer,
   #signup,
-  #sertificates {
+  #certificates {
     scroll-margin-top: 14.8vw;
   }
   body.lock {
@@ -784,7 +779,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 6.3vw;
-    color: rgba(88, 65, 44, 0.8196078431);
+    color: rgb(88, 65, 44);
   }
   .header .header__left .header__job {
     font-size: 3.9vw;
@@ -1057,13 +1052,13 @@ a {
     color: rgb(255, 255, 255);
   }
   /* Сертификаты */
-  .sertificates__wrap {
+  .certificates__wrap {
     grid-template-columns: minmax(300px, 0.6fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     padding: 3vw;
   }
-  .sertificates__wrap .sertificates__img {
+  .certificates__wrap .certificates__img {
     max-width: 100%;
   }
   /* Футер */
