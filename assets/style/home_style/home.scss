@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 .header,
-main,
+.main__block,
 footer {
   width: 100%;
 }
@@ -32,8 +32,7 @@ a {
 .services,
 .offer,
 .free-advice,
-.sertificates {
-  //color: $colorBlack;
+.certificates {
   color: $colorBroun;
 }
 
@@ -113,9 +112,9 @@ a {
 }
 .signup {
 }
-.sertificates {
+.certificates {
   background-color: $colorWhite;
-  .sertificates__wrap {
+  .certificates__wrap {
     display: grid;
     column-gap: 5vw;
   }
@@ -124,7 +123,6 @@ a {
 .footer {
   background-color: $colorHeaderFooter;
   padding: 1.1vw 0;
-
   .footer__main {
     background-color: $colorHeaderFooter;
     display: flex;
@@ -144,7 +142,6 @@ a {
   .footer__bottom {
     display: flex;
     justify-content: center;
-
     .footer__school:hover {
       filter: brightness(0.8);
     }
@@ -349,12 +346,12 @@ a {
     }
   }
   /* Сертификаты */
-  .sertificates__wrap {
+  .certificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20vw;
     place-items: center;
     padding: 2vw 5vw;
-    .sertificates__img {
+    .certificates__img {
       max-width: 100%;
       max-height: 100%;
     }
@@ -650,13 +647,14 @@ a {
     }
   }
   /* Сертификаты */
-  .sertificates__wrap {
+  .certificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 25vw;
     place-items: center;
     padding: 3vw;
-    .sertificates__img {
+    .certificates__img {
       max-height: 100%;
+      max-width: 100%;
     }
   }
   /* Футер */
@@ -702,7 +700,7 @@ a {
   #services,
   #offer,
   #signup,
-  #sertificates {
+  #certificates {
     scroll-margin-top: 14.8vw;
   }
   body.lock {
@@ -962,12 +960,12 @@ a {
     }
   }
   /* Сертификаты */
-  .sertificates__wrap {
+  .certificates__wrap {
     grid-template-columns: minmax(300px, 0.6fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     padding: 3vw;
-    .sertificates__img {
+    .certificates__img {
       max-width: 100%;
     }
   }
