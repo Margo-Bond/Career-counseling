@@ -15,7 +15,7 @@
 }
 @mixin h2-mobile {
   font-size: 4.5vw;
-  line-height: 3vw;
+  line-height: 4.5vw;
   font-weight: 700;
 }
 @mixin h3 {
@@ -30,7 +30,7 @@
 }
 @mixin h3-mobile {
   font-size: 4vw;
-  line-height: 3vw;
+  line-height: 4vw;
   font-weight: 700;
 }
 @mixin text {
@@ -53,7 +53,7 @@
 }
 @mixin button-cost($border-radius, $padding) {
   border: none;
-  background-color: $colorFrame;
+  background-color: $colorButton;
   color: $colorWhite;
   border-radius: $border-radius;
   padding: $padding;

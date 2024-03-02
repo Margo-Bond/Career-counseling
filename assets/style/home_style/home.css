@@ -27,7 +27,6 @@ footer {
 .header,
 .main__block,
 .footer,
-.footer__name,
 a {
   font-family: "Raleway", sans-serif;
 }
@@ -43,7 +42,7 @@ a {
 .offer,
 .free-advice,
 .sertificates {
-  color: rgb(0, 0, 0);
+  color: rgb(80, 49, 40);
 }
 
 /* Хедер */
@@ -75,28 +74,92 @@ a {
 }
 
 /* Main */
+.services {
+  background-color: rgb(255, 255, 255);
+}
+.services .service {
+  display: grid;
+  gap: 3vw;
+}
+.services .service .service__img {
+  height: 100%;
+}
+.services .service .service__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services .service .service__desc .service__list {
+  display: flex;
+  flex-direction: column;
+  list-style-position: inside;
+}
+.services .service .service__desc .service__list-item {
+  display: flex;
+}
+.services .service .service__desc .service__button:hover {
+  cursor: pointer;
+}
+.services .service .service__desc .service__cost {
+  font-weight: 700;
+}
+
+.free-advice {
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+  background-color: rgba(198, 157, 144, 0.4);
+}
+.free-advice .free-advice__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+.free-advice .free-advice__img {
+  max-width: 100%;
+}
+
+.sertificates {
+  background-color: rgb(255, 255, 255);
+}
+.sertificates .sertificates__wrap {
+  display: grid;
+  -moz-column-gap: 5vw;
+       column-gap: 5vw;
+}
+
 /* Футер */
 .footer {
   background-color: rgb(200, 178, 164);
-  display: flex;
   padding: 1.1vw 0;
 }
-.footer .footer__left {
+.footer .footer__main {
+  background-color: rgb(200, 178, 164);
   display: flex;
 }
-.footer .footer__right {
+.footer .footer__main .footer__left {
   display: flex;
 }
-.footer .footer__right .footer__media:hover {
+.footer .footer__main .footer__right {
+  display: flex;
+}
+.footer .footer__main .footer__right .footer__media:hover {
   filter: brightness(0.8);
 }
-.footer .footer__name {
+.footer .footer__main .footer__name {
   font-weight: 600;
 }
 .footer .footer__bottom {
   display: flex;
-  border: 1px solid red;
-  flex-direction: column;
+  justify-content: center;
+}
+.footer .footer__bottom .footer__school:hover {
+  filter: brightness(0.8);
+}
+.footer .footer__bottom a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
 }
 
 /* >1024px */
@@ -109,6 +172,7 @@ a {
     line-height: 2vw;
     font-weight: 700;
   }
+  #about,
   #services,
   #offer,
   #signup {
@@ -124,6 +188,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 2.2vw;
+    color: rgba(88, 65, 44, 0.8196078431);
   }
   .header .header__left .header__job {
     font-size: 1.2vw;
@@ -144,9 +209,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 11vw;
-    padding-bottom: 5vw;
-    padding-left: 5vw;
+    padding: 5vw 3vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
     display: flex;
@@ -165,9 +228,8 @@ a {
   }
   .about .about__text {
     text-align: center;
-    text-indent: 2vw;
     width: 44vw;
-    align-content: space-around;
+    text-indent: 3vw;
   }
   .about .story {
     padding-top: 2vw;
@@ -176,66 +238,53 @@ a {
     font-weight: 400;
     text-align: justify;
   }
-  .about .story .newlinetext {
-    display: block;
-  }
   /* Основные услуги */
-  .services {
-    background-color: rgb(255, 255, 255);
-  }
-  .services .service {
-    display: grid;
+  .service {
     grid-template-columns: 0.3fr 1fr;
-    padding: 2vw 5vw;
-    gap: 3vw;
+    padding: 2vw 0;
   }
-  .services .service .service__picture .service__img {
+  .service .service__img {
     width: 100%;
-    height: 100%;
     border: 5px solid rgba(134, 85, 69, 0.7);
   }
-  .services .service .service__desc {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5vw;
-  }
-  .services .service .service__desc .service__name {
+  .service .service__name {
     font-size: 1.5vw;
     line-height: 1.5vw;
     font-weight: 700;
   }
-  .services .service .service__desc .service__text,
-  .services .service .service__desc .service__cost,
-  .services .service .service__desc .service__list {
+  .service .service__text,
+  .service .service__cost,
+  .service .service__list {
     font-size: 1.3vw;
     line-height: 1.5vw;
     font-weight: 400;
     text-align: justify;
   }
-  .services .service .service__desc .service__cost {
-    font-weight: 700;
+  .service .service__list,
+  .service .service__list-item {
+    gap: 1vw;
   }
-  .services .service .service__desc .service__list {
-    display: flex;
-    flex-direction: column;
-    list-style-position: inside;
-    gap: 0.5vw;
+  .service .service__mark {
+    width: 1.8vw;
+    height: 1.8vw;
   }
-  .services .service .service__desc .button-cost {
+  .service .service__button {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0.5vw;
   }
-  .services .service .service__desc .button-cost:hover {
-    cursor: pointer;
-  }
-  .services .service_top {
+  .service_top {
+    grid-template-rows: 12vw;
     padding-top: 3vw;
   }
-  .services .service_reverse {
+  .service_reverse {
+    grid-template-rows: 12vw;
     grid-template-columns: 1fr 0.3fr;
+  }
+  .service_express {
+    grid-template-rows: 20vw;
   }
   /* Пакетное предложение */
   .offer {
@@ -261,11 +310,25 @@ a {
     text-align: justify;
   }
   .offer .descriptionoffer .descriptionbody .offer__list {
-    padding-top: 1.5vw;
+    padding-top: 1vw;
+    display: flex;
+    height: 4vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick {
+    width: 2vw;
+    height: 2vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick .tick-img {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-text {
+    padding-left: 0.5vw;
+    padding-top: 0.2vw;
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0.5vw;
@@ -278,8 +341,14 @@ a {
     font-weight: 700;
   }
   /* Бесплатная встреча */
-  .free-advice {
-    background-color: rgba(198, 157, 144, 0.4);
+  .free-advice__text {
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .free-advice__picture {
+    width: 40%;
   }
   /* Запись на консультацию */
   .signup {
@@ -316,43 +385,44 @@ a {
     color: rgb(255, 255, 255);
   }
   /* Сертификаты */
-  .sertificates {
-    background-color: rgb(255, 255, 255);
-  }
-  .sertificates .sertificates__wrap {
-    display: grid;
+  .sertificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20vw;
     place-items: center;
     padding: 2vw 5vw;
-    -moz-column-gap: 5vw;
-         column-gap: 5vw;
   }
-  .sertificates .sertificates__wrap .sertificates__img {
+  .sertificates__wrap .sertificates__img {
     max-width: 100%;
     max-height: 100%;
-    height: auto;
   }
   /* Футер */
-  .footer {
-    justify-content: space-evenly;
+  .footer__main {
+    justify-content: center;
     align-items: center;
+    margin-bottom: 1vw;
+    gap: 4vw;
   }
-  .footer .footer__left {
-    flex-basis: 42%;
-    justify-content: end;
-  }
-  .footer .footer__right {
-    flex-basis: 35%;
-    justify-content: start;
+  .footer__main .footer__right {
     gap: 3vw;
   }
-  .footer .footer__right .footer__media {
+  .footer__main .footer__right .footer__media {
     width: 2vw;
     height: 2vw;
   }
-  .footer .footer__name {
+  .footer__main .footer__name {
     font-size: 1.3vw;
+  }
+  .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+  }
+  .footer__bottom .footer__development {
+    font-size: 1.1vw;
+  }
+  .footer__bottom .footer__school {
+    font-size: 1.1vw;
   }
 }
 /* 768-1023px */
@@ -384,6 +454,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 3.5vw;
+    color: rgba(88, 65, 44, 0.8196078431);
   }
   .header .header__left .header__job {
     font-size: 2.3vw;
@@ -454,9 +525,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 10vw;
-    padding-bottom: 5vw;
-    padding-left: 5vw;
+    padding: 5vw 7vw;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
     display: flex;
@@ -492,62 +561,55 @@ a {
     display: block;
   }
   /* Основные услуги */
-  .services {
-    background-color: rgb(255, 255, 255);
-  }
   .services .service {
-    display: grid;
     grid-template-columns: 0.4fr 1fr;
     padding: 2vw 0;
-    gap: 3vw;
   }
-  .services .service .service__picture .service__img {
+  .services .service .service__img {
     max-width: 100%;
-    min-height: 17vw;
     border: 5px solid rgba(134, 85, 69, 0.7);
   }
-  .services .service .service__desc {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5vw;
-  }
-  .services .service .service__desc .service__name {
+  .services .service .service__name {
     font-size: 2.4vw;
     line-height: 1.5vw;
     font-weight: 700;
   }
-  .services .service .service__desc .service__text,
-  .services .service .service__desc .service__cost,
-  .services .service .service__desc .service__list {
+  .services .service .service__text,
+  .services .service .service__cost,
+  .services .service .service__list {
     font-size: 2vw;
     line-height: 2vw;
     font-weight: 400;
     text-align: justify;
   }
-  .services .service .service__desc .service__cost {
-    font-weight: 700;
+  .services .service .service__list,
+  .services .service .service__list-item {
+    gap: 1vw;
   }
-  .services .service .service__desc .service__list {
-    display: flex;
-    flex-direction: column;
-    list-style-position: inside;
-    gap: 0.5vw;
+  .services .service .service__mark {
+    width: 1.8vw;
+    height: 1.8vw;
   }
-  .services .service .service__desc .button-cost {
+  .services .service .service__button {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 0.7vw;
   }
-  .services .service .service__desc .button-cost:hover {
-    cursor: pointer;
+  .services .service .service__button:active {
+    font-weight: 700;
   }
   .services .service_top {
+    grid-template-rows: 19vw;
     padding-top: 3vw;
   }
   .services .service_reverse {
-    grid-template-columns: 1fr 0.4fr;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 19vw;
+  }
+  .services .service_express {
+    grid-template-rows: 31vw;
   }
   /* Пакетное предложение */
   .offer {
@@ -573,12 +635,26 @@ a {
     text-align: justify;
   }
   .offer .descriptionoffer .descriptionbody .offer__list {
-    padding-top: 1.5vw;
+    padding-top: 1vw;
+    display: flex;
+    height: 5vw;
+    gap: 0.5vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick {
+    width: 2vw;
+    height: 2vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick .tick-img {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-text {
+    padding-left: 0.5vw;
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     padding: 0.5vw;
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 0.7vw;
@@ -586,13 +662,22 @@ a {
   .offer .descriptionoffer .descriptionbody .offer__button:hover {
     cursor: pointer;
   }
+  .offer .descriptionoffer .descriptionbody .offer__button:active {
+    font-weight: 700;
+  }
   .offer .descriptionoffer .descriptionbody .offer__cost {
     padding-top: 1.5vw;
     font-weight: 700;
   }
   /* Бесплатная встреча */
-  .free-advice {
-    background-color: rgba(198, 157, 144, 0.4);
+  .free-advice__text {
+    font-size: 2vw;
+    line-height: 2vw;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .free-advice__picture {
+    width: 100%;
   }
   /* Запись на консультацию */
   .signup {
@@ -629,41 +714,43 @@ a {
     color: rgb(255, 255, 255);
   }
   /* Сертификаты */
-  .sertificates {
-    background-color: rgb(255, 255, 255);
-  }
-  .sertificates .sertificates__wrap {
-    display: grid;
+  .sertificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 25vw;
     place-items: center;
     padding: 3vw;
-    -moz-column-gap: 5vw;
-         column-gap: 5vw;
   }
-  .sertificates .sertificates__wrap .sertificates__img {
+  .sertificates__wrap .sertificates__img {
     max-height: 100%;
   }
   /* Футер */
-  .footer {
-    justify-content: space-evenly;
+  .footer__main {
+    margin-bottom: 1vw;
+    justify-content: center;
     align-items: center;
+    gap: 5vw;
   }
-  .footer .footer__left {
-    flex-basis: 72%;
-    justify-content: center;
-  }
-  .footer .footer__right {
-    flex-basis: 23%;
-    justify-content: center;
+  .footer__main .footer__right {
     gap: 4vw;
   }
-  .footer .footer__right .footer__media {
+  .footer__main .footer__right .footer__media {
     width: 3.5vw;
     height: 3.5vw;
   }
-  .footer .footer__name {
+  .footer__main .footer__name {
     font-size: 2.6vw;
+  }
+  .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+  }
+  .footer__bottom .footer__development {
+    font-size: 2.2vw;
+  }
+  .footer__bottom .footer__school {
+    font-size: 2.2vw;
   }
 }
 /* 320-767px */
@@ -673,7 +760,7 @@ a {
   }
   .subtitle {
     font-size: 4.5vw;
-    line-height: 3vw;
+    line-height: 4.5vw;
     font-weight: 700;
   }
   #about,
@@ -697,6 +784,7 @@ a {
   }
   .header .header__left .header__name {
     font-size: 6.3vw;
+    color: rgba(88, 65, 44, 0.8196078431);
   }
   .header .header__left .header__job {
     font-size: 3.9vw;
@@ -767,7 +855,7 @@ a {
   }
   /* Обо мне */
   .about {
-    padding-top: 17vw;
+    padding: 7vw 0;
     color: rgb(255, 255, 255);
     background-color: rgba(189, 143, 128, 0.6);
   }
@@ -780,13 +868,13 @@ a {
     background-size: auto 90vw;
     border-radius: 50%;
     border: 2.5px solid rgba(134, 85, 69, 0.7);
-    margin: 0 auto;
+    margin: 0 auto 3vw;
   }
   .about .about__text {
     padding-top: 2vw;
     text-align: center;
     font-size: 4.5vw;
-    line-height: 3vw;
+    line-height: 4.5vw;
     font-weight: 700;
   }
   .about .story {
@@ -804,33 +892,27 @@ a {
   .services {
     display: flex;
     flex-direction: column;
-    gap: 3vw;
-    background-color: rgb(255, 255, 255);
+    gap: 6vw;
   }
   .services .service {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 1fr;
-    padding: 2vw 0;
-    gap: 3vw;
   }
   .services .service .service__picture {
     display: flex;
     justify-content: center;
   }
   .services .service .service__picture .service__img {
-    max-width: 40%;
-    max-height: 100%;
+    max-width: 55%;
     border: 4px solid rgba(134, 85, 69, 0.7);
   }
   .services .service .service__desc {
-    display: flex;
-    flex-direction: column;
-    gap: 3vw;
+    align-items: center;
+    gap: 2vw;
   }
   .services .service .service__desc .service__name {
     font-size: 4vw;
-    line-height: 3vw;
+    line-height: 4vw;
     font-weight: 700;
   }
   .services .service .service__desc .service__text,
@@ -841,80 +923,77 @@ a {
     font-weight: 400;
     text-align: justify;
   }
-  .services .service .service__desc .service__cost {
-    line-height: 3vw;
+  .services .service .service__desc .service__list,
+  .services .service .service__desc .service__list-item {
+    gap: 3vw;
   }
-  .services .service .service__desc .service__cost_bold {
+  .services .service .service__desc .service__mark {
+    width: 3.8vw;
+    height: 3.8vw;
+  }
+  .services .service .service__desc .service__cost {
     font-weight: 700;
   }
-  .services .service .service__desc .service__list {
-    display: flex;
-    flex-direction: column;
-    list-style-position: inside;
-    gap: 2vw;
-  }
-  .services .service .service__desc .service__list-item {
-    text-align: justify;
-    list-style-position: inside;
-  }
-  .services .service .service__desc .button-cost {
+  .services .service .service__desc .service__button {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 1vw;
   }
-  .services .service .service__desc .button-cost:hover {
-    cursor: pointer;
-  }
-  .services .service_top {
-    padding-top: 4vw;
+  .services .service .service__desc .service__button:active {
+    font-weight: 700;
   }
   .services .service_reverse {
-    grid-template-rows: 0.6fr 1fr;
-    justify-content: end;
+    grid-template-rows: 1fr 1fr;
   }
   .services .service_reverse .service__desc_order {
     order: 2;
   }
   .services .service_reverse .service__picture_order {
-    display: flex;
-    justify-content: center;
     order: 1;
-  }
-  .services .service_long {
-    grid-template-rows: 0.4fr 1fr;
   }
   /* Пакетное предложение */
   .offer {
     background-color: rgba(198, 157, 144, 0.7);
+    padding-top: 3vw;
   }
   .offer .descriptionoffer {
-    margin-top: 2vw;
-    padding: 1vw;
     padding-left: 2.5vw;
+    padding-right: 2.7vw;
     background-color: rgb(255, 255, 255);
   }
   .offer .descriptionoffer .descriptiontitle {
     text-align: center;
     font-size: 4vw;
-    line-height: 3vw;
+    line-height: 4vw;
     font-weight: 700;
+    margin-top: 2vw;
+    padding: 3vw;
   }
   .offer .descriptionoffer .descriptionbody {
     padding: 2vw;
-    text-align: left;
     font-size: 3.7vw;
     line-height: 3.5vw;
     font-weight: 400;
     text-align: justify;
   }
   .offer .descriptionoffer .descriptionbody .offer__list {
-    padding-top: 1.5vw;
+    padding-top: 3vw;
+    display: flex;
+    gap: 2vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick {
+    width: 4vw;
+    height: 4vw;
+  }
+  .offer .descriptionoffer .descriptionbody .offer__list .offer-tick .tick-img {
+    width: 3.8vw;
+    height: 3.8vw;
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     border: none;
-    background-color: rgba(134, 85, 69, 0.7);
+    background-color: rgb(124, 75, 61);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 1vw;
@@ -922,25 +1001,38 @@ a {
   .offer .descriptionoffer .descriptionbody .offer__button:hover {
     cursor: pointer;
   }
+  .offer .descriptionoffer .descriptionbody .offer__button:active {
+    font-weight: 700;
+  }
   .offer .descriptionoffer .descriptionbody .offer__cost {
+    text-align: center;
     padding-top: 1.5vw;
     font-weight: 700;
   }
   /* Бесплатная встреча */
   .free-advice {
-    background-color: rgba(198, 157, 144, 0.4);
+    flex-direction: column;
+    align-items: center;
+  }
+  .free-advice .free-advice__text {
+    font-size: 3.7vw;
+    line-height: 3.5vw;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .free-advice .free-advice__picture {
+    width: 70%;
   }
   /* Запись на консультацию */
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(134, 85, 69, 0.7);
-    height: 10vw;
     display: flex;
     gap: 1vw;
   }
   .signup .signuptext {
     font-size: 4.5vw;
-    line-height: 3vw;
+    line-height: 4.5vw;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -959,46 +1051,52 @@ a {
   }
   .signup .signuplink .signuplinklink {
     font-size: 4vw;
-    line-height: 3vw;
+    line-height: 4vw;
     font-weight: 700;
     text-decoration: none;
     color: rgb(255, 255, 255);
   }
   /* Сертификаты */
-  .sertificates {
-    background-color: rgb(255, 255, 255);
-  }
-  .sertificates .sertificates__wrap {
-    display: grid;
+  .sertificates__wrap {
     grid-template-columns: minmax(300px, 0.6fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     padding: 3vw;
-    -moz-column-gap: 5vw;
-         column-gap: 5vw;
   }
-  .sertificates .sertificates__wrap .sertificates__img {
+  .sertificates__wrap .sertificates__img {
     max-width: 100%;
   }
   /* Футер */
   .footer {
+    padding: 2vw;
+  }
+  .footer__main {
     flex-direction: column;
-    gap: 3vw;
-    padding: 2vw 0 1.5vw;
-  }
-  .footer .footer__left {
     justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 4vw;
   }
-  .footer .footer__right {
-    flex-basis: 25%;
+  .footer__main .footer__right {
+    gap: 7vw;
+  }
+  .footer__main .footer__right .footer__media {
+    width: 5vw;
+    height: 5vw;
+  }
+  .footer__main .footer__name {
+    font-size: 3.4vw;
+  }
+  .footer__bottom {
+    display: flex;
     justify-content: center;
-    gap: 6vw;
+    align-items: center;
+    gap: 1vw;
   }
-  .footer .footer__right .footer__media {
-    width: 4.5vw;
-    height: 4.5vw;
+  .footer__bottom .footer__development {
+    font-size: 2.9vw;
   }
-  .footer .footer__name {
-    font-size: 3.5vw;
+  .footer__bottom .footer__school {
+    font-size: 2.9vw;
   }
 }/*# sourceMappingURL=home.css.map */
