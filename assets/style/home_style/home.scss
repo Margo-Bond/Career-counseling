@@ -18,9 +18,11 @@ footer {
   font-family: $fontLogo;
 }
 .header,
+.header__item,
 .main__block,
 .footer,
-a {
+.footer__media,
+.footer__school {
   font-family: $fontContent;
 }
 .header,
@@ -54,7 +56,7 @@ a {
   .header__nav {
     width: 100%;
     display: flex;
-    a {
+    .header__item {
       text-decoration: none;
       color: $colorWhite;
       text-transform: uppercase;
@@ -145,7 +147,7 @@ a {
     .footer__school:hover {
       filter: brightness(0.8);
     }
-    a {
+    .footer__school {
       text-decoration: none;
       color: $colorWhite;
       text-transform: uppercase;
@@ -187,7 +189,7 @@ a {
       align-items: center;
       .header__nav {
         justify-content: space-between;
-        a {
+        .header__item {
           font-size: 1.2vw;
         }
       }
@@ -435,7 +437,7 @@ a {
         align-items: end;
         gap: 1vw;
         padding-right: 1.5vw;
-        a {
+        .header__item {
           font-size: 2.2vw;
         }
       }
@@ -669,6 +671,9 @@ a {
         width: 3.5vw;
         height: 3.5vw;
       }
+      .footer__media:active {
+        filter: brightness(0.8);
+      }
     }
     .footer__name {
       font-size: 2.6vw;
@@ -684,6 +689,9 @@ a {
     }
     .footer__school {
       font-size: 2.2vw;
+    }
+    .footer__school:active {
+      filter: brightness(0.8);
     }
   }
 }
@@ -737,7 +745,7 @@ a {
         flex-direction: column;
         align-items: center;
         gap: 2%;
-        a {
+        .header__item {
           font-size: 4vw;
           text-transform: uppercase;
         }
@@ -985,6 +993,9 @@ a {
         width: 5vw;
         height: 5vw;
       }
+      .footer__media:active {
+        filter: brightness(0.8);
+      }
     }
     .footer__name {
       font-size: 3.4vw;
@@ -1000,6 +1011,9 @@ a {
     }
     .footer__school {
       font-size: 2.9vw;
+    }
+    .footer__school:active {
+      filter: brightness(0.8);
     }
   }
 }

@@ -19,9 +19,11 @@ footer {
 }
 
 .header,
+.header__item,
 .main__block,
 .footer,
-a {
+.footer__media,
+.footer__school {
   font-family: "Raleway", sans-serif;
 }
 
@@ -60,7 +62,7 @@ a {
   width: 100%;
   display: flex;
 }
-.header__menu .header__nav a {
+.header__menu .header__nav .header__item {
   text-decoration: none;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -150,7 +152,7 @@ a {
 .footer .footer__bottom .footer__school:hover {
   filter: brightness(0.8);
 }
-.footer .footer__bottom a {
+.footer .footer__bottom .footer__school {
   text-decoration: none;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -195,7 +197,7 @@ a {
   .header .header__menu .header__nav {
     justify-content: space-between;
   }
-  .header .header__menu .header__nav a {
+  .header .header__menu .header__nav .header__item {
     font-size: 1.2vw;
   }
   .header .header__burger {
@@ -472,7 +474,7 @@ a {
     gap: 1vw;
     padding-right: 1.5vw;
   }
-  .header .header__menu .header__nav a {
+  .header .header__menu .header__nav .header__item {
     font-size: 2.2vw;
   }
   .header .header__menu.active {
@@ -732,6 +734,9 @@ a {
     width: 3.5vw;
     height: 3.5vw;
   }
+  .footer__main .footer__right .footer__media:active {
+    filter: brightness(0.8);
+  }
   .footer__main .footer__name {
     font-size: 2.6vw;
   }
@@ -746,6 +751,9 @@ a {
   }
   .footer__bottom .footer__school {
     font-size: 2.2vw;
+  }
+  .footer__bottom .footer__school:active {
+    filter: brightness(0.8);
   }
 }
 /* 320-767px */
@@ -802,7 +810,7 @@ a {
     align-items: center;
     gap: 2%;
   }
-  .header .header__menu .header__nav a {
+  .header .header__menu .header__nav .header__item {
     font-size: 4vw;
     text-transform: uppercase;
   }
@@ -1079,6 +1087,9 @@ a {
     width: 5vw;
     height: 5vw;
   }
+  .footer__main .footer__right .footer__media:active {
+    filter: brightness(0.8);
+  }
   .footer__main .footer__name {
     font-size: 3.4vw;
   }
@@ -1093,5 +1104,8 @@ a {
   }
   .footer__bottom .footer__school {
     font-size: 2.9vw;
+  }
+  .footer__bottom .footer__school:active {
+    filter: brightness(0.8);
   }
 }/*# sourceMappingURL=home.css.map */
