@@ -266,7 +266,7 @@ footer {
   }
   .service .service__button {
     border: none;
-    background-color: rgb(124, 75, 61);
+    background-color: rgba(124, 75, 61, 0.8);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0.5vw;
@@ -324,7 +324,7 @@ footer {
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     border: none;
-    background-color: rgb(124, 75, 61);
+    background-color: rgba(124, 75, 61, 0.8);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0.5vw;
@@ -588,7 +588,7 @@ footer {
   }
   .services .service .service__button {
     border: none;
-    background-color: rgb(124, 75, 61);
+    background-color: rgba(124, 75, 61, 0.8);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 0.7vw;
@@ -650,7 +650,7 @@ footer {
   .offer .descriptionoffer .descriptionbody .offer__button {
     padding: 0.5vw;
     border: none;
-    background-color: rgb(124, 75, 61);
+    background-color: rgba(124, 75, 61, 0.8);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 0.7vw;
@@ -939,7 +939,7 @@ footer {
   }
   .services .service .service__desc .service__button {
     border: none;
-    background-color: rgb(124, 75, 61);
+    background-color: rgba(124, 75, 61, 0.8);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 1vw;
@@ -996,7 +996,7 @@ footer {
   }
   .offer .descriptionoffer .descriptionbody .offer__button {
     border: none;
-    background-color: rgb(124, 75, 61);
+    background-color: rgba(124, 75, 61, 0.8);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     padding: 1vw;
