@@ -219,11 +219,16 @@ footer {
     .about__text {
       text-align: center;
       width: 44vw;
-      text-indent: 3vw;
+      color: $colorHeaderName;
+      opacity: 0.7;
     }
     .story {
       padding-top: 2vw;
       @include text;
+      color: $colorWhite;
+    }
+    .story-col {
+      color: $colorHeaderName;
     }
   }
   /* Основные услуги */
@@ -315,13 +320,18 @@ footer {
     @include text;
   }
   .free-advice__picture {
-    width: 40%;
+    width: 41%;
+  }
+  .free-advice {
+    display: flex;
+    flex-direction: columm;
+    justify-content: space-between;
   }
   /* Запись на консультацию */
   .signup {
     color: $colorWhite;
     background-color: $colorSignUp;
-    height: 7vw;
+    height: 6vw;
     .signuptext {
       @include h2;
       display: flex;
@@ -508,6 +518,8 @@ footer {
       text-indent: 2vw;
       width: 60vw;
       @include h2-tablet;
+      color: $colorHeaderName;
+      opacity: 0.7;
     }
     .story {
       padding-top: 2vw;
@@ -515,6 +527,10 @@ footer {
       .newlinetext {
         display: block;
       }
+      color: $colorWhite;
+    }
+    .story-col {
+      color: $colorHeaderName;
     }
     // }
   }
@@ -618,11 +634,12 @@ footer {
   .free-advice__picture {
     width: 100%;
   }
+
   /* Запись на консультацию */
   .signup {
     color: $colorWhite;
     background-color: $colorSignUp;
-    height: 9vw;
+    height: 6.5vw;
     .signuptext {
       @include h2-tablet;
       display: flex;
@@ -814,6 +831,8 @@ footer {
       padding-top: 2vw;
       text-align: center;
       @include h2-mobile;
+      color: $colorHeaderName;
+      opacity: 0.7;
     }
     .story {
       padding: 3vw;
@@ -822,6 +841,10 @@ footer {
       .newlinetext {
         display: block;
       }
+      color: $colorWhite;
+    }
+    .story-col {
+      color: $colorHeaderName;
     }
   }
   /* Основные услуги */
