@@ -113,6 +113,7 @@ footer {
 }
 .free-advice .free-advice__img {
   max-width: 100%;
+  height: 100%;
 }
 
 .certificates {
@@ -240,51 +241,51 @@ footer {
     color: rgb(88, 65, 44);
   }
   /* Основные услуги */
-  .service {
+  .services .service {
     grid-template-columns: 0.3fr 1fr;
     padding: 2vw 0;
   }
-  .service .service__img {
+  .services .service .service__img {
     width: 100%;
     border: 5px solid rgba(134, 85, 69, 0.7);
   }
-  .service .service__name {
+  .services .service .service__name {
     font-size: 1.5vw;
     line-height: 1.5vw;
     font-weight: 700;
   }
-  .service .service__text,
-  .service .service__cost,
-  .service .service__list {
+  .services .service .service__text,
+  .services .service .service__cost,
+  .services .service .service__list {
     font-size: 1.3vw;
     line-height: 1.5vw;
     font-weight: 400;
     text-align: justify;
   }
-  .service .service__list,
-  .service .service__list-item {
+  .services .service .service__list,
+  .services .service .service__list-item {
     gap: 1vw;
   }
-  .service .service__mark {
+  .services .service .service__mark {
     width: 1.8vw;
     height: 1.8vw;
   }
-  .service .service__button {
+  .services .service .service__button {
     border: none;
     background-color: rgba(124, 75, 61, 0.8);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0.5vw;
   }
-  .service_top {
+  .services .service_top {
     grid-template-rows: 12vw;
     padding-top: 3vw;
   }
-  .service_reverse {
+  .services .service_reverse {
     grid-template-rows: 12vw;
     grid-template-columns: 1fr 0.3fr;
   }
-  .service_express {
+  .services .service_express {
     grid-template-rows: 20vw;
   }
   /* Пакетное предложение */
@@ -342,19 +343,22 @@ footer {
     font-weight: 700;
   }
   /* Бесплатная встреча */
-  .free-advice__text {
+  .free-advice {
+    display: flex;
+    flex-direction: columm;
+    justify-content: space-between;
+  }
+  .free-advice .free-advice__wrap {
+    justify-content: space-between;
+  }
+  .free-advice .free-advice__wrap .free-advice__text {
     font-size: 1.3vw;
     line-height: 1.5vw;
     font-weight: 400;
     text-align: justify;
   }
-  .free-advice__picture {
+  .free-advice .free-advice__picture {
     width: 41%;
-  }
-  .free-advice {
-    display: flex;
-    flex-direction: columm;
-    justify-content: space-between;
   }
   /* Запись на консультацию */
   .signup {
@@ -682,13 +686,16 @@ footer {
     font-weight: 700;
   }
   /* Бесплатная встреча */
-  .free-advice__text {
+  .free-advice .free-advice__wrap {
+    justify-content: space-between;
+  }
+  .free-advice .free-advice__wrap .free-advice__text {
     font-size: 2vw;
     line-height: 2vw;
     font-weight: 400;
     text-align: justify;
   }
-  .free-advice__picture {
+  .free-advice .free-advice__picture {
     width: 100%;
   }
   /* Запись на консультацию */
