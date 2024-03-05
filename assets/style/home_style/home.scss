@@ -110,9 +110,8 @@ footer {
   }
   .free-advice__img {
     max-width: 100%;
+    height: 100%;
   }
-}
-.signup {
 }
 .certificates {
   background-color: $colorWhite;
@@ -232,43 +231,45 @@ footer {
     }
   }
   /* Основные услуги */
-  .service {
-    grid-template-columns: 0.3fr 1fr;
-    padding: 2vw 0;
-    .service__img {
-      width: 100%;
-      border: 5px solid $colorFrame;
+  .services {
+    .service {
+      grid-template-columns: 0.3fr 1fr;
+      padding: 2vw 0;
+      .service__img {
+        width: 100%;
+        border: 5px solid $colorFrame;
+      }
+      .service__name {
+        @include h3;
+      }
+      .service__text,
+      .service__cost,
+      .service__list {
+        @include text;
+      }
+      .service__list,
+      .service__list-item {
+        gap: 1vw;
+      }
+      .service__mark {
+        width: 1.8vw;
+        height: 1.8vw;
+      }
+      .service__button {
+        @include button-cost(10px, 0.5vw);
+      }
     }
-    .service__name {
-      @include h3;
+    .service_top {
+      grid-template-rows: 12vw;
+      padding-top: 3vw;
     }
-    .service__text,
-    .service__cost,
-    .service__list {
-      @include text;
+    .service_reverse {
+      grid-template-rows: 12vw;
+      grid-template-columns: 1fr 0.3fr;
     }
-    .service__list,
-    .service__list-item {
-      gap: 1vw;
+    .service_express {
+      grid-template-rows: 20vw;
     }
-    .service__mark {
-      width: 1.8vw;
-      height: 1.8vw;
-    }
-    .service__button {
-      @include button-cost(10px, 0.5vw);
-    }
-  }
-  .service_top {
-    grid-template-rows: 12vw;
-    padding-top: 3vw;
-  }
-  .service_reverse {
-    grid-template-rows: 12vw;
-    grid-template-columns: 1fr 0.3fr;
-  }
-  .service_express {
-    grid-template-rows: 20vw;
   }
   /* Пакетное предложение */
   .offer {
@@ -316,16 +317,19 @@ footer {
     }
   }
   /* Бесплатная встреча */
-  .free-advice__text {
-    @include text;
-  }
-  .free-advice__picture {
-    width: 41%;
-  }
   .free-advice {
     display: flex;
     flex-direction: columm;
     justify-content: space-between;
+    .free-advice__wrap {
+      justify-content: space-between;
+      .free-advice__text {
+        @include text;
+      }
+    }
+    .free-advice__picture {
+      width: 41%;
+    }
   }
   /* Запись на консультацию */
   .signup {
@@ -628,13 +632,17 @@ footer {
     }
   }
   /* Бесплатная встреча */
-  .free-advice__text {
-    @include text-tablet;
+  .free-advice {
+    .free-advice__wrap {
+      justify-content: space-between;
+      .free-advice__text {
+        @include text-tablet;
+      }
+    }
+    .free-advice__picture {
+      width: 100%;
+    }
   }
-  .free-advice__picture {
-    width: 100%;
-  }
-
   /* Запись на консультацию */
   .signup {
     color: $colorWhite;
