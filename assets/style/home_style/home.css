@@ -225,7 +225,8 @@ footer {
   .about .about__text {
     text-align: center;
     width: 44vw;
-    text-indent: 3vw;
+    color: rgb(88, 65, 44);
+    opacity: 0.7;
   }
   .about .story {
     padding-top: 2vw;
@@ -233,6 +234,10 @@ footer {
     line-height: 1.5vw;
     font-weight: 400;
     text-align: justify;
+    color: rgb(255, 255, 255);
+  }
+  .about .story-col {
+    color: rgb(88, 65, 44);
   }
   /* Основные услуги */
   .service {
@@ -344,13 +349,18 @@ footer {
     text-align: justify;
   }
   .free-advice__picture {
-    width: 40%;
+    width: 41%;
+  }
+  .free-advice {
+    display: flex;
+    flex-direction: columm;
+    justify-content: space-between;
   }
   /* Запись на консультацию */
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(134, 85, 69, 0.7);
-    height: 7vw;
+    height: 6vw;
     display: flex;
     gap: 3vw;
   }
@@ -545,6 +555,8 @@ footer {
     font-size: 2.7vw;
     line-height: 2vw;
     font-weight: 700;
+    color: rgb(88, 65, 44);
+    opacity: 0.7;
   }
   .about .story {
     padding-top: 2vw;
@@ -552,9 +564,13 @@ footer {
     line-height: 2vw;
     font-weight: 400;
     text-align: justify;
+    color: rgb(255, 255, 255);
   }
   .about .story .newlinetext {
     display: block;
+  }
+  .about .story-col {
+    color: rgb(88, 65, 44);
   }
   /* Основные услуги */
   .services .service {
@@ -679,7 +695,7 @@ footer {
   .signup {
     color: rgb(255, 255, 255);
     background-color: rgba(134, 85, 69, 0.7);
-    height: 9vw;
+    height: 6.5vw;
     display: flex;
     gap: 3vw;
   }
@@ -879,6 +895,8 @@ footer {
     font-size: 4.5vw;
     line-height: 4.5vw;
     font-weight: 700;
+    color: rgb(88, 65, 44);
+    opacity: 0.7;
   }
   .about .story {
     padding: 3vw;
@@ -887,9 +905,13 @@ footer {
     line-height: 3.5vw;
     font-weight: 400;
     text-align: justify;
+    color: rgb(255, 255, 255);
   }
   .about .story .newlinetext {
     display: block;
+  }
+  .about .story-col {
+    color: rgb(88, 65, 44);
   }
   /* Основные услуги */
   .services {
