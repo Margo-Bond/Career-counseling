@@ -1,44 +1,5 @@
 @import '../vars';
 @import '../templates';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.header,
-.main__block,
-footer {
-  width: 100%;
-}
-.header__name,
-.header__job {
-  font-family: $fontLogo;
-}
-.header,
-.header__item,
-.main__block,
-.footer,
-.footer__media,
-.footer__school {
-  font-family: $fontContent;
-}
-.header,
-.about,
-.signup,
-.footer {
-  color: $colorWhite;
-}
-.services,
-.offer,
-.free-advice,
-.certificates {
-  color: $colorBroun;
-}
-
-/* Хедер */
 .header {
   background-color: $colorHeaderFooter;
   display: flex;
@@ -64,8 +25,31 @@ footer {
     }
   }
 }
-/* Main */
 .about {
+  color: $colorWhite;
+  background-color: $colorAbout;
+  .about-img {
+    background-image: url('/assets/images/img_about.jpg');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 2.5px solid $colorFrame;
+  }
+  .about__text {
+    text-align: center;
+    color: $colorHeaderName;
+    opacity: 0.7;
+  }
+  .story {
+    @include text;
+    color: $colorWhite;
+  }
+  .story_mb {
+    margin-bottom: 2vw;
+  }
+  .story_color {
+    color: $colorHeaderName;
+  }
 }
 .services {
   background-color: $colorWhite;
@@ -97,6 +81,25 @@ footer {
   }
 }
 .offer {
+  background-color: $colorOffer;
+  .offer__description {
+    background-color: $colorWhite;
+    .offer__description-title {
+      text-align: center;
+    }
+    .offer__description-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+      padding: 2vw 2vw 0;
+    }
+    .offer__list {
+      display: flex;
+    }
+    .offer__cost {
+      font-weight: 700;
+    }
+  }
 }
 .free-advice {
   display: flex;
@@ -107,6 +110,26 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3vw;
+    .signup {
+      display: flex;
+      color: $colorWhite;
+      background-color: $colorSignUp;
+      .signup__text {
+        display: flex;
+        align-items: center;
+      }
+      .signup__link {
+        display: flex;
+        align-items: center;
+      }
+      .signup__link:hover {
+        filter: brightness(0.8);
+      }
+      .signup__link-telegram {
+        text-decoration: none;
+        color: $colorWhite;
+      }
+    }
   }
   .free-advice__img {
     max-width: 100%;
@@ -120,7 +143,6 @@ footer {
     column-gap: 5vw;
   }
 }
-/* Футер */
 .footer {
   background-color: $colorHeaderFooter;
   padding: 1.1vw 0;
@@ -153,8 +175,6 @@ footer {
     }
   }
 }
-
-/* >1024px */
 @media (min-width: 1024px) {
   .main__block {
     padding: 2vw 3vw;
@@ -168,7 +188,6 @@ footer {
   #signup {
     scroll-margin-top: 6.6vw;
   }
-  /* Хедер */
   .header {
     height: 6.6vw;
     padding: 1.1vw 3vw;
@@ -197,40 +216,26 @@ footer {
       display: none;
     }
   }
-  /* Обо мне */
   .about {
-    padding: 5vw 3vw;
-    color: $colorWhite;
-    background-color: $colorAbout;
     display: flex;
-    gap: 10vw;
     justify-content: center;
+    padding: 5vw 3vw;
+    gap: 10vw;
+    .subtitle {
+      margin-bottom: 2vw;
+    }
     .about-img {
       width: 20vw;
       height: 20vw;
-      background: url(../../images/img_3038new.jpg);
-      background-position-x: center;
-      background-repeat: no-repeat;
       background-size: auto 30vw;
-      border-radius: 50%;
-      border: 2.5px solid $colorFrame;
     }
     .about__text {
-      text-align: center;
       width: 44vw;
-      color: $colorHeaderName;
-      opacity: 0.7;
     }
     .story {
-      padding-top: 2vw;
       @include text;
-      color: $colorWhite;
-    }
-    .story-col {
-      color: $colorHeaderName;
     }
   }
-  /* Основные услуги */
   .services {
     .service {
       grid-template-columns: 0.3fr 1fr;
@@ -271,97 +276,68 @@ footer {
       grid-template-rows: 20vw;
     }
   }
-  /* Пакетное предложение */
-  .offer {
-    background-color: $colorOffer;
-    .descriptionoffer {
-      margin-top: 2vw;
-      padding: 3vw;
-      background-color: $colorWhite;
-      .descriptiontitle {
-        text-align: center;
-        @include h3;
+  .offer__description {
+    margin-top: 2vw;
+    padding: 3vw;
+    .offer__description-title {
+      @include h3;
+    }
+    .offer__description-body {
+      @include text;
+    }
+    .offer__list {
+      height: 4vw;
+      .offer-tick {
+        width: 2vw;
+        height: 2vw;
       }
-      .descriptionbody {
-        padding: 2vw;
-        text-align: left;
-        @include text;
-        .offer__list {
-          padding-top: 1vw;
-          display: flex;
-          height: 4vw;
-          .offer-tick {
-            width: 2vw;
-            height: 2vw;
-            .tick-img {
-              width: 1.8vw;
-              height: 1.8vw;
-            }
-          }
-          .offer-text {
-            padding-left: 0.5vw;
-            padding-top: 0.2vw;
-          }
-        }
-        .offer__button {
-          @include button-cost(10px, 0.5vw);
-        }
-        .offer__button:hover {
-          cursor: pointer;
-        }
-        .offer__cost {
-          padding-top: 1.5vw;
-          font-weight: 700;
-        }
+      .tick-img {
+        width: 1.8vw;
+        height: 1.8vw;
+      }
+      .offer-text {
+        padding-left: 1vw;
       }
     }
+    .offer__button {
+      @include button-cost(10px, 0.5vw);
+    }
+    .offer__button:hover {
+      cursor: pointer;
+    }
   }
-  /* Бесплатная встреча */
   .free-advice {
-    display: flex;
     flex-direction: columm;
     justify-content: space-between;
+    .free-advice__picture {
+      width: 41%;
+    }
     .free-advice__wrap {
       justify-content: space-between;
       .free-advice__text {
         @include text;
       }
     }
-    .free-advice__picture {
-      width: 41%;
-    }
-  }
-  /* Запись на консультацию */
-  .signup {
-    color: $colorWhite;
-    background-color: $colorSignUp;
-    height: 6vw;
-    .signuptext {
-      @include h2;
-      display: flex;
-      align-items: center;
-    }
-    display: flex;
-    gap: 3vw;
-    .signuplink {
-      display: flex;
-      align-items: center;
-      gap: 1vw;
-      :hover {
-        filter: brightness(0.8);
+    .signup {
+      padding: 2vw;
+      gap: 3vw;
+      .signup__text {
+        @include h2;
       }
-      .signuplinkimg {
+      .signup__link {
+        gap: 1vw;
+      }
+      .signup__link-img {
         width: 2vw;
         height: 2vw;
       }
-      .signuplinklink {
+      .signup__link-telegram {
         @include h3;
         text-decoration: none;
         color: $colorWhite;
       }
     }
   }
-  /* Сертификаты */
   .certificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20vw;
@@ -372,7 +348,6 @@ footer {
       max-height: 100%;
     }
   }
-  /* Футер */
   .footer__main {
     justify-content: center;
     align-items: center;
@@ -402,8 +377,6 @@ footer {
     }
   }
 }
-
-/* 768-1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
   .main__block {
     padding: 2vw 5vw;
@@ -417,7 +390,6 @@ footer {
   #signup {
     scroll-margin-top: 8.2vw;
   }
-  /* Хедер */
   .header {
     height: 8.6vw;
     padding: 1vw 5vw;
@@ -499,46 +471,27 @@ footer {
       transform: scale(0);
     }
   }
-  /* Обо мне */
   .about {
-    padding: 5vw 7vw;
-    color: $colorWhite;
-    background-color: $colorAbout;
     display: flex;
-    gap: 5vw;
     justify-content: center;
+    padding: 5vw 7vw;
+    gap: 5vw;
+    .subtitle {
+      margin-bottom: 2vw;
+    }
     .about-img {
       width: 32vw;
       height: 32vw;
-      background: url(../../images/img_3038new.jpg);
-      background-position-x: center;
-      background-repeat: no-repeat;
       background-size: auto 40vw;
-      border-radius: 50%;
-      border: 2.5px solid $colorFrame;
     }
     .about__text {
-      text-align: center;
-      text-indent: 2vw;
       width: 60vw;
       @include h2-tablet;
-      color: $colorHeaderName;
-      opacity: 0.7;
     }
     .story {
-      padding-top: 2vw;
       @include text-tablet;
-      .newlinetext {
-        display: block;
-      }
-      color: $colorWhite;
     }
-    .story-col {
-      color: $colorHeaderName;
-    }
-    // }
   }
-  /* Основные услуги */
   .services {
     .service {
       grid-template-columns: 0.4fr 1fr;
@@ -582,98 +535,74 @@ footer {
       grid-template-rows: 31vw;
     }
   }
-  /* Пакетное предложение */
   .offer {
-    background-color: $colorOffer;
-    .descriptionoffer {
-      margin-top: 2vw;
+    .subtitle {
+      margin-bottom: 3vw;
+    }
+    .offer__description {
       padding: 3vw;
-      background-color: $colorWhite;
-      .descriptiontitle {
-        text-align: center;
+      .offer__description-title {
         @include h3-tablet;
       }
-      .descriptionbody {
-        padding: 2vw;
-        text-align: left;
+      .offer__description-body {
         @include text-tablet;
-        .offer__list {
-          padding-top: 1vw;
-          display: flex;
-          height: 5vw;
-          gap: 0.5vw;
-          .offer-tick {
-            width: 2vw;
-            height: 2vw;
-            .tick-img {
-              width: 1.8vw;
-              height: 1.8vw;
-            }
-          }
-          .offer-text {
-            padding-left: 0.5vw;
-          }
+      }
+      .offer__list {
+        height: 5vw;
+        gap: 0.5vw;
+        .offer-tick {
+          width: 2vw;
+          height: 2vw;
         }
-        .offer__button {
-          padding: 0.5vw;
-          @include button-cost(7px, 0.7vw);
+        .tick-img {
+          width: 1.8vw;
+          height: 1.8vw;
         }
-        .offer__button:hover {
-          cursor: pointer;
+        .offer-text {
+          padding-left: 0.5vw;
         }
-        .offer__button:active {
-          font-weight: 700;
-        }
-        .offer__cost {
-          padding-top: 1.5vw;
-          font-weight: 700;
-        }
+      }
+      .offer__button {
+        padding: 0.5vw;
+        @include button-cost(7px, 0.7vw);
+      }
+      .offer__button:hover {
+        cursor: pointer;
+      }
+      .offer__button:active {
+        font-weight: 700;
       }
     }
   }
-  /* Бесплатная встреча */
-  .free-advice {
-    .free-advice__wrap {
-      justify-content: space-between;
-      .free-advice__text {
-        @include text-tablet;
-      }
-    }
-    .free-advice__picture {
-      width: 100%;
+  .free-advice__picture {
+    width: 100%;
+  }
+  .free-advice__wrap {
+    justify-content: space-between;
+    .free-advice__text {
+      @include text-tablet;
     }
   }
-  /* Запись на консультацию */
   .signup {
-    color: $colorWhite;
-    background-color: $colorSignUp;
-    height: 6.5vw;
-    .signuptext {
-      @include h2-tablet;
-      display: flex;
-      align-items: center;
-    }
-    display: flex;
+    padding: 1.5vw;
     gap: 3vw;
-    .signuplink {
-      display: flex;
-      align-items: center;
+    .signup__text {
+      @include h2-tablet;
+    }
+    .signup__link {
       gap: 1vw;
-      :hover {
-        filter: brightness(0.8);
-      }
-      .signuplinkimg {
-        width: 4vw;
-        height: 4vw;
-      }
-      .signuplinklink {
-        @include h3-tablet;
-        text-decoration: none;
-        color: $colorWhite;
-      }
+    }
+    .signup__link:active {
+      filter: brightness(0.8);
+    }
+    .signup__link-img {
+      width: 4vw;
+      height: 4vw;
+    }
+    .signup__link-telegram {
+      @include h3-tablet;
     }
   }
-  /* Сертификаты */
   .certificates__wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 25vw;
@@ -684,7 +613,6 @@ footer {
       max-width: 100%;
     }
   }
-  /* Футер */
   .footer__main {
     margin-bottom: 1vw;
     justify-content: center;
@@ -720,8 +648,6 @@ footer {
     }
   }
 }
-
-/* 320-767px */
 @media (min-width: 320px) and (max-width: 767px) {
   .main__block {
     padding: 3vw 4vw;
@@ -739,7 +665,6 @@ footer {
   body.lock {
     overflow: hidden;
   }
-  /* Хедер */
   .header {
     padding: 2vw 4vw;
     .header__left {
@@ -819,43 +744,24 @@ footer {
       transform: scale(0);
     }
   }
-  /* Обо мне */
   .about {
-    padding: 7vw 0;
-    color: $colorWhite;
-    background-color: $colorAbout;
+    .subtitle {
+      margin-bottom: 3vw;
+    }
     .about-img {
       width: 60vw;
       height: 60vw;
-      background: url(../../images/img_3038new.jpg);
-      background-position-x: center;
-      background-repeat: no-repeat;
       background-size: auto 90vw;
-      border-radius: 50%;
-      border: 2.5px solid $colorFrame;
-      margin: 0 auto 3vw;
+      margin: 4vw auto;
     }
     .about__text {
-      padding-top: 2vw;
-      text-align: center;
       @include h2-mobile;
-      color: $colorHeaderName;
-      opacity: 0.7;
+      margin-bottom: 3vw;
     }
     .story {
-      padding: 3vw;
-      text-indent: 5vw;
       @include text-mobile;
-      .newlinetext {
-        display: block;
-      }
-      color: $colorWhite;
-    }
-    .story-col {
-      color: $colorHeaderName;
     }
   }
-  /* Основные услуги */
   .services {
     display: flex;
     flex-direction: column;
@@ -911,94 +817,74 @@ footer {
       }
     }
   }
-  /* Пакетное предложение */
   .offer {
-    background-color: $colorOffer;
-    padding-top: 3vw;
-    .descriptionoffer {
-      padding-left: 2.5vw;
-      padding-right: 2.7vw;
-      background-color: $colorWhite;
-      .descriptiontitle {
-        text-align: center;
+    .subtitle {
+      margin-bottom: 3vw;
+    }
+    .offer__description {
+      padding: 3vw;
+      .offer__description-title {
         @include h3-mobile;
-        margin-top: 2vw;
-        padding: 3vw;
       }
-      .descriptionbody {
-        padding: 2vw;
+      .offer__description-body {
         @include text-mobile;
-        .offer__list {
-          padding-top: 3vw;
-          display: flex;
-          gap: 2vw;
-          .offer-tick {
-            width: 4vw;
-            height: 4vw;
-            .tick-img {
-              width: 3.8vw;
-              height: 3.8vw;
-            }
-          }
+        gap: 4vw;
+      }
+      .offer__list {
+        gap: 2vw;
+        .offer-tick {
+          width: 4vw;
+          height: 4vw;
         }
-        .offer__button {
-          @include button-cost(7px, 1vw);
+        .tick-img {
+          width: 3.8vw;
+          height: 3.8vw;
         }
-        .offer__button:hover {
-          cursor: pointer;
-        }
-        .offer__button:active {
-          font-weight: 700;
-        }
-        .offer__cost {
-          text-align: center;
-          padding-top: 1.5vw;
-          font-weight: 700;
-        }
+      }
+      .offer__button {
+        @include button-cost(7px, 1vw);
+      }
+      .offer__button:active {
+        font-weight: 700;
+      }
+      .offer__cost {
+        text-align: center;
       }
     }
   }
-  /* Бесплатная встреча */
   .free-advice {
     flex-direction: column;
     align-items: center;
-    .free-advice__text {
-      @include text-mobile;
-    }
     .free-advice__picture {
       width: 70%;
     }
-  }
-  /* Запись на консультацию */
-  .signup {
-    color: $colorWhite;
-    background-color: $colorSignUp;
-    .signuptext {
-      @include h2-mobile;
-      display: flex;
-      align-items: center;
+    .free-advice__text {
+      @include text-mobile;
     }
-    display: flex;
-    gap: 1vw;
-    .signuplink {
-      display: flex;
-      align-items: center;
-      gap: 3vw;
-      :hover {
+    .signup {
+      flex-direction: column;
+      padding: 2vw;
+      gap: 1vw;
+      .signup__text {
+        @include h2-mobile;
+        justify-content: center;
+      }
+      .signup__link {
+        justify-content: center;
+        gap: 3vw;
+      }
+      .signup__link:active {
         filter: brightness(0.8);
       }
-      .signuplinkimg {
+      .signup__link-img {
         width: 5vw;
         height: 5vw;
       }
-      .signuplinklink {
+      .signup__link-telegram {
         @include h3-mobile;
-        text-decoration: none;
-        color: $colorWhite;
       }
     }
   }
-  /* Сертификаты */
   .certificates__wrap {
     grid-template-columns: minmax(300px, 0.6fr);
     grid-template-rows: repeat(2, 1fr);
@@ -1008,7 +894,6 @@ footer {
       max-width: 100%;
     }
   }
-  /* Футер */
   .footer {
     padding: 2vw;
   }
