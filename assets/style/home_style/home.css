@@ -239,7 +239,7 @@ footer {
   #about,
   #services,
   #offer,
-  #signup {
+  #free-advice {
     scroll-margin-top: 6.6vw;
   }
   .header {
@@ -469,7 +469,7 @@ footer {
   #services,
   #offer,
   #about,
-  #signup {
+  #free-advice {
     scroll-margin-top: 8.2vw;
   }
   .header {
@@ -768,7 +768,7 @@ footer {
   #about,
   #services,
   #offer,
-  #signup,
+  #free-advice,
   #certificates {
     scroll-margin-top: 14.8vw;
   }
