@@ -772,9 +772,9 @@
     }
   }
   .services {
-    display: flex;
-    flex-direction: column;
-    gap: 6vw;
+    .subtitle {
+      margin-bottom: 3vw;
+    }
     .service {
       grid-template-columns: 1fr;
       .service__img {
@@ -813,7 +813,11 @@
         }
       }
     }
+    .service_top {
+      margin-bottom: 6vw;
+    }
     .service_reverse {
+      margin-bottom: 6vw;
       .service__desc_order {
         order: 2;
       }

@@ -884,10 +884,8 @@ footer {
     font-weight: 400;
     text-align: justify;
   }
-  .services {
-    display: flex;
-    flex-direction: column;
-    gap: 6vw;
+  .services .subtitle {
+    margin-bottom: 3vw;
   }
   .services .service {
     grid-template-columns: 1fr;
@@ -935,6 +933,12 @@ footer {
   }
   .services .service .service__desc .service__button:active {
     font-weight: 700;
+  }
+  .services .service_top {
+    margin-bottom: 6vw;
+  }
+  .services .service_reverse {
+    margin-bottom: 6vw;
   }
   .services .service_reverse .service__desc_order {
     order: 2;
